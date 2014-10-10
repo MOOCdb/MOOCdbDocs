@@ -9,7 +9,8 @@ platform for internal use. The instructions will enable to download the software
 
 
 MOOCviz
-===
+=======
+
 
 Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
 by the learner is an "event type". Multiple "event types" differentiate between different activities done by the learner. We base
@@ -36,7 +37,7 @@ Testing
 
 
 Feature Factory
-===
+===============
 
 Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
 by the learner is an "event type". Multiple "event types" differentiate between different activities done by the learner. We base
@@ -62,7 +63,7 @@ Testing
 -------------------
 
 LabelMe- Text 
-===
+=============
 
 Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
 by the learner is an "event type". Multiple "event types" differentiate between different activities done by the learner. We base
