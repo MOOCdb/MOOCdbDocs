@@ -1,8 +1,9 @@
 #############
-Translation
+Translation software documentation 
 #############
 
-This document is about how the translation from traking log files to moocdb is done.
+This document describes in detail how the translation is done from the raw data files Coursera and edX provide and how to run the 
+software and different assumptions and heuristics used during the translation.
 
 ************
 Platforms
