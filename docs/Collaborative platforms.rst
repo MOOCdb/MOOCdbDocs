@@ -87,3 +87,9 @@ Installation steps
 
 Testing 
 -------------------
+
+
+Curate Me  
+==========
+
+Coming soon
