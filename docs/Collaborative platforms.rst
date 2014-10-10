@@ -21,11 +21,7 @@ syntactically and semantically.
 System Requirements 
 -------------------
 
-play_video
-^^^^^^^^^^
 
-problem_check
-^^^^^^^^^^^^^
 
 
 Installation steps 
@@ -48,11 +44,7 @@ syntactically and semantically.
 System Requirements 
 -------------------
 
-play_video
-^^^^^^^^^^
 
-problem_check
-^^^^^^^^^^^^^
 
 
 Installation steps 
@@ -74,11 +66,7 @@ syntactically and semantically.
 System Requirements 
 -------------------
 
-play_video
-^^^^^^^^^^
 
-problem_check
-^^^^^^^^^^^^^
 
 
 Installation steps 
