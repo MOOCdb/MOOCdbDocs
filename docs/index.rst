@@ -12,9 +12,8 @@ Contents:
 
    Translation software 
    Collaborative platforms
-   Analytic platforms 
+   Analytic engines
    Machine learning applications 
-   readme
 
 New Version
 ============
