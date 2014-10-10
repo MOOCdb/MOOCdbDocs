@@ -18,5 +18,6 @@ Contents:
    Analytic engines
    Machine learning applications 
 
-New Version
+Contact
 ============
+Founded at CSAIL, MIT. Please contact kalyan@csail.mit.edu for more information. 
