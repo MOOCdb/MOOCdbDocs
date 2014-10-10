@@ -10,7 +10,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   translation software 
+   Translation software 
    Collaborative platforms
    Analytic platforms 
    Machine learning applications 
