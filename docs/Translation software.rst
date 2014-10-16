@@ -39,7 +39,7 @@ Files from edX for a course called <course name>
    * - MITx-2.01x-2013_Spring___2014_08_17___users.csv
      - contains student state
      - test
-    * - MITx-2.01x-2013_Spring___2014_08_17___course_structure-prod-analytics.json 
+   * - MITx-2.01x-2013_Spring___2014_08_17___course_structure-prod-analytics.json 
      - contains student state
      - test
    * - MITx-2.01x-2013_Spring___2014_08_17___wiki_article.csv 
