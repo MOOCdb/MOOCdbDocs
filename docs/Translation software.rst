@@ -21,9 +21,40 @@ Files from edX for a course called <course name>
    * - File
      - Type
      - content
-   * - sql 
+   * - MITx-2.01x-2013_Spring___2014_08_17___profiles.csv 
      - contains student state
      - test
+   * - MITx-2.01x-2013_Spring___2014_08_10___tracking_log.json 
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___studentmodule.csv 
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___user_id_map.csv 
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___certificates.csv  
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___users.csv
+     - contains student state
+     - test
+    * - MITx-2.01x-2013_Spring___2014_08_17___course_structure-prod-analytics.json 
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___wiki_article.csv 
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___enrollment.csv  
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___wiki_articlerevision.csv 
+     - contains student state
+     - test
+   * - MITx-2.01x-2013_Spring___2014_08_17___forum.mongo
+     - contains student state
+     - test
+
   
 
 primarily stored in JSON logs. 
