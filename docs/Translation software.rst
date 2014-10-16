@@ -21,10 +21,8 @@ Files from edX for a course called <course name>
 
    * - File
      - Type
-     - Contents
    * - sql 
      - contains student state.
-     - it is an sql 
   
 
 primarily stored in JSON logs. 
