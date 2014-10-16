@@ -25,14 +25,7 @@ Files from edX for a course called <course name>
    * - sql 
      - contains student state.
      - it is an sql 
-   * - 10/07/14
-     - Added new student and instructor events relating to cohort use to the
-       :ref:`Tracking Logs` chapter.
-   * - 
-     - Removed information about XML course formats. See the `edX Open
-       Learning XML Guide <http://edx-open-learning-
-       xml.readthedocs.org/en/latest/index.html>`_ for information about
-       building XML courses.
+  
 
 primarily stored in JSON logs. 
 
