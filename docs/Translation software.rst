@@ -15,7 +15,7 @@ Files from edX for a course called <course name>
 **********************
 
 .. list-table::
-   :widths: 10 70 40
+   :widths: 40 10 40
    :header-rows: 1
 
    * - File
