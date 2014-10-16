@@ -16,13 +16,15 @@ Files from edX for a course called <course name>
 **********************
 
 .. list-table::
-   :widths: 10 70
+   :widths: 10 70 40
    :header-rows: 1
 
    * - File
      - Type
+     - content
    * - sql 
-     - contains student state.
+     - contains student state
+     - test
   
 
 primarily stored in JSON logs. 
