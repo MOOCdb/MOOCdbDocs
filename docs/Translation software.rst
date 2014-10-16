@@ -19,11 +19,12 @@ Files from edX for a course called <course name>
    :widths: 10 70
    :header-rows: 1
 
-   * - Date
-     - Change
-   * - 10/16/14
-     - Updated video events with new fields relating to mobile device use in
-       the :ref:`Tracking Logs` chapter.
+   * - File
+     - Type
+     - Contents
+   * - sql 
+     - contains student state.
+     - it is an sql 
    * - 10/07/14
      - Added new student and instructor events relating to cohort use to the
        :ref:`Tracking Logs` chapter.
