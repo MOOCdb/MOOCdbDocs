@@ -10,7 +10,15 @@ three different platforms-edX, OpenedX and Coursera.
 edx
 ===
 
-Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
+Data from edX platform is delivered as the following files 
+
+primarily stored in JSON logs. 
+
+
+Translation semantics
++++++++++++++++++++++
+
+A fundamental axis which is used to record precisely the activity performed 
 by the learner is an "event type". Multiple "event types" differentiate between different activities done by the learner. We base
 our software on this fundamental axis. Below we provide detailed description of how each event type is translated into an entry in 
 MOOCdb. This detailed information gives researchers and plaform providers information about MOOCdb translation and how data is mapped 
