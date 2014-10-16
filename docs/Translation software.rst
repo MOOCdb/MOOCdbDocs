@@ -10,7 +10,6 @@ three different platforms-edX, OpenedX and Coursera.
 edx
 ===
 
-Data from edX platform is delivered as the following files 
 **********************
 Files from edX for a course called <course name>
 **********************
