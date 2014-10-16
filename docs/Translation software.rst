@@ -21,37 +21,37 @@ Files from edX for a course called <course name>
    * - File
      - Type
      - content
-   * - MITx-2.01x-2013_Spring___2014_08_17___profiles.csv 
+   * - <course name>__profiles.csv 
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_10___tracking_log.json 
+   * - <course name>__tracking_log.json 
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___studentmodule.csv 
+   * - <course name>__studentmodule.csv 
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___user_id_map.csv 
+   * - <course name>_user_id_map.csv 
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___certificates.csv  
+   * - <course name>__certificates.csv  
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___users.csv
+   * - <course name>_users.csv
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___course_structure-prod-analytics.json 
+   * - <course name>__course_structure-prod-analytics.json 
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___wiki_article.csv 
+   * - <course name>_wiki_article.csv 
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___enrollment.csv  
+   * - <course name>__enrollment.csv  
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___wiki_articlerevision.csv 
+   * - <course name>__wiki_articlerevision.csv 
      - contains student state
      - test
-   * - MITx-2.01x-2013_Spring___2014_08_17___forum.mongo
+   * - <course name>__forum.mongo
      - contains student state
      - test
 
