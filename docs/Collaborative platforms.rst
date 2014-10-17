@@ -65,11 +65,21 @@ Testing
 LabelMe- Text 
 =============
 
-Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
-by the learner is an "event type". Multiple "event types" differentiate between different activities done by the learner. We base
-our software on this fundamental axis. Below we provide detailed description of how each event type is translated into an entry in 
-MOOCdb. This detailed information gives researchers and plaform providers information about MOOCdb translation and how data is mapped 
-syntactically and semantically. 
+We developed an online platform where users would post their tagging projects and a crowd of helpers can p
+articipate in MOOC data science by selecting a project and tagging the content based on some instructions. 
+We call the online collaborative platform that serves this purpose Label Me-Text. 
+Label Me’s current incarnation is shown in Figure 3.  It works in the following ways: 
+
+-	Users requiring annotation of natural language can create an annotation project by providing a csv file for the content, instructions and examples for tagging. 
+
+-	Taggers (Label Me’s crowd) can participate by selecting a project, following the instructions and tagging the content 
+
+-	A database consisting of tags for the content for the project is initialized and populated as taggers work. A number of analytic services are provided around this database such as – evaluation of inter rater reliability, summary of tags, summary of activity for a project (how many taggers helped, time series of number of tags).
+
+-	A service can be called upon to filter the tagged data based on the reliability measures just mentioned. It then uses methods based upon latent semantic analysis to learn a tagging model. 
+
+-	Taggers (Label Me’s crowd) are given credit for every tag they have provided and the number of their tags that pass the filters to be used in model learning. 
+
 
 System Requirements 
 -------------------
