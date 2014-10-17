@@ -63,7 +63,15 @@ One of the problem with our current delivery is that a user is identified by a n
 and it is not clear how they are linked and where they are redundancies. We automatically link and clean this up and create a hash_id per 
 user and have mechanisms to store user information with multiple hash. 
 
+**************************************
+Translation Stage 1 - JSON-to-relation
+**************************************
 
+
+
+****************************************
+Translation Stage 2 - Relation-to-MOOCdb
+****************************************
 
 #. Prerequisites
    This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
