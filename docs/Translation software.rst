@@ -80,9 +80,11 @@ user and have mechanisms to store user information with multiple hash.
       ``/data/csv/moocdb_csv/<course_name>``
 
 #. Create folder /data/csv/moocdb_csv/<course_name>
-   **For minimal hassle, the MOOCdb CSV folder must have the same name as the intermediary CSV folder. Here, <course_name>. 
+
+   For minimal hassle, the MOOCdb CSV folder **must have the same name as the intermediary CSV folder**. Here, <course_name>. 
+   
    a. Edit import.openedx.relation_to_moocdb/config.py
-      The variables not mentionned in the tutorial must simply be left untouched.
+      **The variables not mentionned in the tutorial must simply be left untouched.**
    b. QUOTECHAR : the quote character used in the intermediary CSV files. Most commonly a single quote : ‘
    c. TIMESTAMP_FORMAT : describes the timestamp pattern used in *_EdxTrackEventTable.csv intermediary CSV file. See python doc to understant syntax.
    d. COURSE_NAME: the name of the folder containing the intermediary CSV files. Here, <course_name>.
