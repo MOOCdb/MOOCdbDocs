@@ -106,7 +106,7 @@ user and have mechanisms to store user information with multiple hash.
 
    Run command :
 
-      mysql -u root -p --local-infile=1 < moocdb.sql
+      ``mysql -u root -p --local-infile=1 < moocdb.sql``
 
    This creates a database named <course_name> in MySQL, and loads the CSV data into it. 
 
