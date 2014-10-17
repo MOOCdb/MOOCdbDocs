@@ -65,7 +65,7 @@ user and have mechanisms to store user information with multiple hash.
 
 
 
-# Prerequisites
+#. Prerequisites
 
 This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
 We will call the source CSV “intermediary CSV” and the output CSV “MOOCdb CSV”.
@@ -80,7 +80,7 @@ We want the MOOCdb CSV to be written to folder
 
 /data/csv/moocdb_csv/<course_name>
 
-# Create folder /data/csv/moocdb_csv/<course_name>
+#. Create folder /data/csv/moocdb_csv/<course_name>
 
 For minimal hassle, the MOOCdb CSV folder must have the same name as the intermediary CSV folder. Here, <course_name>. 
 
@@ -100,14 +100,14 @@ share a common prefix that was generated when running JSON to relation. This pre
 
 DOMAIN: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. (No slash at the end of the domain name) To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
 
-#Launch the piping
+#. Launch the piping
 When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
 
 From within the import.openedx.relation_to_moocdb folder, run command :
 
 time python main.py
 
-#Delete log file
+#. Delete log file
 
 When the piping is done, if everything went well, go to the output directory /data/csv/moocdb_csv/<course_name> and delete the log.org file that takes a lot of space.
 
