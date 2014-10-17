@@ -40,7 +40,7 @@ Feature Factory
 ===============
 
 We are developing a second web-based collaborative platform called Feature Factory. 
-Our current version of this platform can be seen at .._Feature Factory:http://featurefactory.csail.mit.edu. 
+Our current version of this platform can be seen at .._Feature Factory : http://featurefactory.csail.mit.edu. 
 
 Feature Factory offers two modes of engagement:
 
