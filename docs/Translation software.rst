@@ -15,6 +15,7 @@ Files from edX for a course called <course name>
 **********************
 Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
+
 .. list-table::
    :widths: 40 10 70
    :header-rows: 1
