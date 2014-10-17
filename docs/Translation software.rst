@@ -13,9 +13,10 @@ edx
 **********************
 Files from edX for a course called <course name>
 **********************
-
+Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
+and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 .. list-table::
-   :widths: 40 10 40
+   :widths: 40 10 70
    :header-rows: 1
 
    * - File
@@ -23,41 +24,43 @@ Files from edX for a course called <course name>
      - content
    * - <course name>__profiles.csv 
      - csv
-     - test
+     - contains PII information about the learner
    * - <course name>__tracking_log.json 
      - json
-     - test
+     - Clickstream events stored as JSON logs
    * - <course name>__studentmodule.csv 
      - csv
-     - test
+     - Student state information 
    * - <course name>_user_id_map.csv 
      - csv
-     - test
+     - mapping between username, id and hashid 
    * - <course name>__certificates.csv  
      - csv
-     - test
+     - information about certificates for each user_id
    * - <course name>_users.csv
      - csv
-     - test
+     - PII information + meta information like date_joined, last login etc
    * - <course name>__course_structure-prod-analytics.json 
-     - csv
-     - test
+     - JSON
+     - Course structure in JSON
    * - <course name>_wiki_article.csv 
      - csv
-     - test
+     - contains the wiki article information
    * - <course name>__enrollment.csv  
      - csv
-     - test
+     - Contains information about enrollment 
    * - <course name>__wiki_articlerevision.csv 
      - csv
-     - test
+     - Contains information about wiki article revisions done by the students
    * - <course name>__forum.mongo
      - csv
-     - test
+     - contains forum posts etc made by the users 
 
   
 
-primarily stored in JSON logs. 
+One of the problem with our current delivery is that a user is identified by a number of items ; id, user_id, username, hashid, name, first_name, last_name 
+and it is not clear how they are linked and where they are redundancies. We automatically link and clean this up and create a hash_id per 
+user and have mechanisms to store user information with multiple hash. 
 
 
 Translation semantics
