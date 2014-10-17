@@ -39,11 +39,12 @@ Testing
 Feature Factory
 ===============
 
-Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
-by the learner is an "event type". Multiple "event types" differentiate between different activities done by the learner. We base
-our software on this fundamental axis. Below we provide detailed description of how each event type is translated into an entry in 
-MOOCdb. This detailed information gives researchers and plaform providers information about MOOCdb translation and how data is mapped 
-syntactically and semantically. 
+We are developing a second web-based collaborative platform called Feature Factory. 
+Our current version of this platform can be seen at .._Feature Factory:http://featurefactory.csail.mit.edu. 
+Feature Factory offers two modes of engagement:
+- The “solicit” mode is used by MOOC data science, education technology, or learning science research teams. A team describes the outcome it is currently studying or trying to predict. It explicitly explains what features or explanations are sought and it solicits help from the “MOOC crowd”. 
+- In the second mode, “helping”, the MOOC crowd proposes, explanations or variables, and suggests means to operationalize them. They provide comments on proposal or vote them up or down in popularity. The software savvy among them write and share software scripts written to operationalize the most popular or compelling proposals. 
+
 
 System Requirements 
 -------------------
