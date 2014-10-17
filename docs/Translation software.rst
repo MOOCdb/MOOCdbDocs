@@ -22,37 +22,37 @@ Files from edX for a course called <course name>
      - Type
      - content
    * - <course name>__profiles.csv 
-     - contains student state
+     - csv
      - test
    * - <course name>__tracking_log.json 
-     - contains student state
+     - json
      - test
    * - <course name>__studentmodule.csv 
-     - contains student state
+     - csv
      - test
    * - <course name>_user_id_map.csv 
-     - contains student state
+     - csv
      - test
    * - <course name>__certificates.csv  
-     - contains student state
+     - csv
      - test
    * - <course name>_users.csv
-     - contains student state
+     - csv
      - test
    * - <course name>__course_structure-prod-analytics.json 
-     - contains student state
+     - csv
      - test
    * - <course name>_wiki_article.csv 
-     - contains student state
+     - csv
      - test
    * - <course name>__enrollment.csv  
-     - contains student state
+     - csv
      - test
    * - <course name>__wiki_articlerevision.csv 
-     - contains student state
+     - csv
      - test
    * - <course name>__forum.mongo
-     - contains student state
+     - csv
      - test
 
   
