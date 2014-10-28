@@ -91,7 +91,7 @@ Translation Stage 1 - JSON-to-relation
    call the prefix COURSE_PREFIX
 
    From within the tracking log file folder, run command:
-      ``gzip -d COURSE_PREFIX__tracking_log.json.gz
+      ``gzip -d COURSE_PREFIX__tracking_log.json.gz``
    This will extract the tracking log file into .json format, ready to be piped.
 
 #. Create folder /data/csv/intermediary_csv/<course_name>
@@ -100,7 +100,8 @@ Translation Stage 1 - JSON-to-relation
 
    From within the import.openedx.json_to_relation folder, run command:
 
-   ``bash scripts/transformGivenLogfiles.sh /data/csv/intermediary_csv/<course_name> /data/raw/<course_name>/COURSE_PREFIX__tracking_log.json``
+   ``bash scripts/transformGivenLogfiles.sh 
+   /data/csv/intermediary_csv/<course_name> /data/raw/<course_name>/COURSE_PREFIX__tracking_log.json``
 
    As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, and second argument
    is the tracking log json file to pipe. The command may run for a few hours to a few days depends on the size of the raw json tracking log file.The output csv files will be in /data/csv/intermediary_csv/<course_name>
