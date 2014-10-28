@@ -76,7 +76,34 @@ user and have mechanisms to store user information with multiple hash.
 Translation Stage 1 - JSON-to-relation
 **************************************
 
+#. Prerequisites
+   This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
+   JSON tracking log file is stored with other raw data files. We will call the raw data files "raw data" and the output CSV "intermediary CSV".
 
+   Let us suppose that we want to pipe the course named <course_name>,
+   We assume raw data is stored in the folder :
+     ``/data/raw/<course_name>``
+   We want the intermeidary CSV to be written to folder
+     ``/data/csv/intermediary_csv/<course_name>``
+
+#. Unzip tracking log file
+   All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of <course_name>__<creation date>, we will 
+   call the prefix COURSE_PREFIX
+
+   From within the tracking log file folder, run command:
+      ``gzip -d COURSE_PREFIX__tracking_log.json.gz
+   This will extract the tracking log file into .json format, ready to be piped.
+
+#. Create folder /data/csv/intermediary_csv/<course_name>
+
+#. Launch the piping
+
+   From within the import.openedx.json_to_relation folder, run command:
+
+   ``bash scripts/transformGivenLogfiles.sh /data/csv/intermediary_csv/<course_name> /data/raw/<course_name>/COURSE_PREFIX__tracking_log.json``
+
+   As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, and second argument
+   is the tracking log json file to pipe. The command may run for a few hours to a few days depends on the size of the raw json tracking log file.The output csv files will be in /data/csv/intermediary_csv/<course_name>
 
 ****************************************
 Translation Stage 2 - Relation-to-MOOCdb
