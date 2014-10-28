@@ -13,6 +13,12 @@ edx
 **********************
 Files from edX for a course called <course name>
 **********************
+If your course is through edX you would get the files shown below. The most important and perhaps most tedious to process is the tracking log files. 
+To process the tracking log files and get into MOOCdb format, we provide the following detailed instructions. 
+ * To run the software you may want to download the VM from . And request the pem file from kalyan@csail.mit.edu. 
+ * Provision the disk space (hard disk) such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs. 
+ * Download the code from MOOCdb github. The two code repositories that you would download are 
+         
 Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
