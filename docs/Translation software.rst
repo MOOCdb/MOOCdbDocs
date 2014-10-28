@@ -133,9 +133,11 @@ Translation Stage 2 - Relation-to-MOOCdb
 
 Translation details 
 +++++++++++++++++++++
-Some examples of how the translation from raw JSON logs to MOOCdb are provided at 
+Some examples contextualized presented via the two urls below show for an actual course show how the translation from raw JSON logs to MOOCdb takes place  
         http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
+        
         http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
+        
 More details can be found in Quentin Agrens thesis here
         
 
