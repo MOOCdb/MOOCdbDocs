@@ -131,21 +131,12 @@ Translation Stage 2 - Relation-to-MOOCdb
 
 
 
-Translation semantics
+Translation details 
 +++++++++++++++++++++
+Some examples of how the translation from raw JSON logs to MOOCdb are provided at 
+        http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
+        http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
+More details can be found in Quentin Agrens thesis here
+        
 
-A fundamental axis which is used to record precisely the activity performed 
-by the learner is an "event type". Multiple "event types" differentiate between different activities done by the learner. We base
-our software on this fundamental axis. Below we provide detailed description of how each event type is translated into an entry in 
-MOOCdb. This detailed information gives researchers and plaform providers information about MOOCdb translation and how data is mapped 
-syntactically and semantically. 
-
-Tracklog Event types
--------------------
-
-play_video
-^^^^^^^^^^
-
-problem_check
-^^^^^^^^^^^^^
 
