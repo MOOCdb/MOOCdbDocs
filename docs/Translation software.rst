@@ -19,7 +19,9 @@ To process the tracking log files and get into MOOCdb format, we provide the fol
  * Provision the disk space (hard disk) such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs. 
  * Download the code from MOOCdb github. The three code repositories that you would download are 
          *https://github.com/MOOCdb/import.openedx.diagnosis
+         
          *Stage 1: https://github.com/MOOCdb/import.openedx.json_to_relation
+         
          *Stage 2: https://github.com/MOOCdb/import.openedx.relation_to_moocdb
 
 Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
