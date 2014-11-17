@@ -29,9 +29,10 @@ To process the tracking log files and get into MOOCdb format, we provide the fol
         #. install pip using 
               sudo easy_install pip
         #. Install pandas 
-                * Make sure your Pandas version is higher than 0.14.0. If it is below that you would have to update Pandas by 
-                running 
+                * Make sure your Pandas version is higher than 0.14.0. If it is below that you would have to update Pandas by running 
+                        
                         pip install pandas --upgrade 
+                        
                 * You may have to upgrade numpy and numexpr before upgrading pandas if upgrading pandas gives you an error. 
                 The command to upgrade numpy and numexpr is the same 
                 
