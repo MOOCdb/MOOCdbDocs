@@ -113,26 +113,26 @@ user and have mechanisms to store user information with multiple hash.
 
         From within the tracking log file folder, run command:
    
-      ``gzip -d COURSE_PREFIX__tracking_log.json.gz``
+          ``gzip -d COURSE_PREFIX__tracking_log.json.gz``
       
-      This will extract the tracking log file into .json format, ready to be piped.
+        This will extract the tracking log file into .json format, ready to be piped.
 
     #. If there are multiple log files, merge all the log files for a single course into one log file 
     #. Run JSON to relation code 
 
-      This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
-      JSON tracking log file is stored with other raw data files. We will call the raw data files "raw data" and the output CSV "intermediary CSV".
+        This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
+        JSON tracking log file is stored with other raw data files. We will call the raw data files "raw data" and the output CSV "intermediary CSV".
 
-      Let us suppose that we want to pipe the course named <course_name>,
-      We assume raw data is stored in the folder :
+        Let us suppose that we want to pipe the course named <course_name>,
+        We assume raw data is stored in the folder :
    
             ``.../<course_name>/log_data/``
      
-      Create a folder called intermeidary_csv under the folder named <course_name>
+        Create a folder called intermeidary_csv under the folder named <course_name>
    
             ``.../<course_name>/intermediary_csv/``
      
-      Create another folder called moocdb_csv under the folder named <course_name>
+        Create another folder called moocdb_csv under the folder named <course_name>
    
             ``.../<course_name>/moocdb_csv/``
 
@@ -183,8 +183,8 @@ user and have mechanisms to store user information with multiple hash.
                 This prefix is also the name of the only .sql file in the folder. 
       
             f. DOMAIN: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
-   (No slash at the end of the domain name) 
-   To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
+               (No slash at the end of the domain name) 
+               To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
 
     #. Launch the piping
         When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
