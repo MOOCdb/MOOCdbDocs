@@ -105,7 +105,7 @@ and contains the detailed clickstream events. These are the events which are rec
      - csv
      - contains forum posts etc made by the users
      
-     ..Note: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
+Note: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
 
     #. Unzip tracking log file
         All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of ``<course_name>__<creation date>``, we will 
