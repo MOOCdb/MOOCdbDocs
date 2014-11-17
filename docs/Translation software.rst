@@ -28,7 +28,7 @@ Step 1: Installing the required packages or downloading a VM
         * When instantiating this virtual machine on Amazon or locally, please provision the disk space (hard disk) 
           such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
  * Option 2: Install all the packages on your local machine 
-        * The following packages are required on a MOOCdb machine 
+        The following packages are required on a MOOCdb machine 
         #. Unidecode package available at 
         #. ijson package available at 
         #. install python-setuptools
@@ -148,8 +148,6 @@ user and have mechanisms to store user information with multiple hash.
         and second argument is the tracking log json file to pipe. 
         The command may run for a few hours to a few days depends on the size of the 
         raw json tracking log file.The output csv files will be in /.../<course_name>/intermediary_csv
-
-
 
     #. Run relation to MOOCdb 
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
