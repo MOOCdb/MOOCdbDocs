@@ -128,7 +128,7 @@ user and have mechanisms to store user information with multiple hash.
 
     #. If there are multiple log files, merge all the log files for a single course into one log file 
     
-    #. Run JSON to relation code
+    #. Run JSON to relation code (a.k.a apipe)
 
         This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
         JSON tracking log file is stored with other raw data files. We will call the raw data files ``raw data`` and the output CSV ``intermediary CSV``.
@@ -162,27 +162,18 @@ user and have mechanisms to store user information with multiple hash.
         an example of the output csv files produced for link5_10x course:
         
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_CorrectMapTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EdxTrackEventTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EventIpTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_InputStateTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_LoadInfoTable.csv``
-                        
                         ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv``
         
 
-    #. Run relation to MOOCdb 
+    #. Run relation to MOOCdb (a.k.a qpipe)
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
         We will call the source CSV ``intermediary CSV`` and the output CSV ``MOOCdb CSV``.
 
@@ -208,13 +199,11 @@ user and have mechanisms to store user information with multiple hash.
    
             e. ``CSV_PREFIX`` : All the intermediary CSV file names in 
    
-                  ``/.../<course_name>/intermediary_csv/``
+                        ``/.../<course_name>/intermediary_csv/``
          
-                share a common prefix that was generated when running JSON to relation. 
-      
-                This prefix is also the name of the only .sql file in the folder. In the above case this prefix would be :
+                share a common prefix that was generated when running JSON to relation. This prefix is also the name of the only .sql file in the folder. For example, in the above case this prefix would be :
                 
-                  ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
       
             f. ``DOMAIN``: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
                (No slash at the end of the domain name) 
