@@ -190,7 +190,7 @@ user and have mechanisms to store user information with multiple hash.
         When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
         From within the import.openedx.relation_to_moocdb folder, run command :
    
-      ``time python main.py``
+            ``time python main.py``
 
     #. Delete log file
         When the piping is done, if everything went well, go to the output directory /.../<course_name>/moocdb_csv/ and 
