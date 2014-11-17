@@ -47,11 +47,11 @@ Step 1: Installing the required packages or downloading a VM
                         pip install numexpr --upgrade 
                         
         #. Download the code from MOOCdb github. The three code repositories that you would download are 
-         *https://github.com/MOOCdb/import.openedx.diagnosis
+         *https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.diagnosis
          
-         *https://github.com/MOOCdb/import.openedx.json_to_relation
+         *https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe
          
-         *https://github.com/MOOCdb/import.openedx.relation_to_moocdb
+         *https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe
          
          
 **************************************
