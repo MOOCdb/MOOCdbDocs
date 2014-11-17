@@ -142,7 +142,9 @@ user and have mechanisms to store user information with multiple hash.
         From within the import.openedx.json_to_relation folder, run command:
 
         ``bash scripts/transformGivenLogfiles.sh 
-        /.../<course_name>/intermediary_csv/ /../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
+        /.../<course_name>/intermediary_csv/ 
+        
+        /../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
 
         As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, 
         and second argument is the tracking log json file to pipe. 
