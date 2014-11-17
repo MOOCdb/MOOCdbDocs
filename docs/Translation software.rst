@@ -107,37 +107,34 @@ and contains the detailed clickstream events. These are the events which are rec
 One of the problem with our current delivery is that a user is identified by a number of items ; id, user_id, username, hashid, name, first_name, last_name 
 and it is not clear how they are linked and where they are redundancies. We automatically link and clean this up and create a hash_id per 
 user and have mechanisms to store user information with multiple hash. 
-
-
     #. Unzip tracking log file
-   All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of <course_name>__<creation date>, we will 
-   call the prefix COURSE_PREFIX
+        All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of <course_name>__<creation date>, we will 
+        call the prefix COURSE_PREFIX
 
-   From within the tracking log file folder, run command:
+        From within the tracking log file folder, run command:
    
       ``gzip -d COURSE_PREFIX__tracking_log.json.gz``
       
-   This will extract the tracking log file into .json format, ready to be piped.
+      This will extract the tracking log file into .json format, ready to be piped.
 
     #. If there are multiple log files, merge all the log files for a single course into one log file 
-
     #. Run JSON to relation code 
 
-   This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
-   JSON tracking log file is stored with other raw data files. We will call the raw data files "raw data" and the output CSV "intermediary CSV".
+      This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
+      JSON tracking log file is stored with other raw data files. We will call the raw data files "raw data" and the output CSV "intermediary CSV".
 
-   Let us suppose that we want to pipe the course named <course_name>,
-   We assume raw data is stored in the folder :
+      Let us suppose that we want to pipe the course named <course_name>,
+      We assume raw data is stored in the folder :
    
-     ``.../<course_name>/log_data/``
+            ``.../<course_name>/log_data/``
      
-   Create a folder called intermeidary_csv under the folder named <course_name>
+      Create a folder called intermeidary_csv under the folder named <course_name>
    
-     ``.../<course_name>/intermediary_csv/``
+            ``.../<course_name>/intermediary_csv/``
      
-   Create another folder called moocdb_csv under the folder named <course_name>
+      Create another folder called moocdb_csv under the folder named <course_name>
    
-      ``.../<course_name>/moocdb_csv/``
+            ``.../<course_name>/moocdb_csv/``
 
     #. Launch the piping
 
@@ -165,7 +162,7 @@ user and have mechanisms to store user information with multiple hash.
 
         We want the MOOCdb CSV to be written to folder 
 
-      ``/.../<course_name>/moocdb_csv/``
+              ``/.../<course_name>/moocdb_csv/``
 
             a. Edit import.openedx.relation_to_moocdb/config.py
                 **The variables not mentionned in the tutorial must simply be left untouched.**
