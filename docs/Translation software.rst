@@ -30,10 +30,15 @@ Step 1: Installing the required packages or downloading a VM
           such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
  * Option 2: Install all the packages on your local machine 
         The following packages are required on a MOOCdb machine 
+        
         #. Install ``Unidecode`` package available at 
+        
         #. Install ``ijson`` package available at 
+        
         #. Install ``python-setuptools``
+        
         #. Install ``pip`` using 
+        
               ``sudo easy_install pip``
         #. Install pandas 
                 * Make sure your Pandas version is higher than ``0.14.0``. If it is below that you would have to update Pandas by running 
