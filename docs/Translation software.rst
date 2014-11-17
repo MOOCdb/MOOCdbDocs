@@ -29,29 +29,29 @@ Step 1: Installing the required packages or downloading a VM
           such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
  * Option 2: Install all the packages on your local machine 
         The following packages are required on a MOOCdb machine 
-        #. Unidecode package available at 
-        #. ijson package available at 
-        #. install python-setuptools
-        #. install pip using 
-              sudo easy_install pip
+        #. Install ``Unidecode`` package available at 
+        #. Install ``ijson`` package available at 
+        #. Install ``python-setuptools``
+        #. Install ``pip`` using 
+              ``sudo easy_install pip``
         #. Install pandas 
-                * Make sure your Pandas version is higher than 0.14.0. If it is below that you would have to update Pandas by running 
+                * Make sure your Pandas version is higher than ``0.14.0``. If it is below that you would have to update Pandas by running 
                         
-                        pip install pandas --upgrade 
+                        ``pip install pandas --upgrade`` 
                         
-                * You may have to upgrade numpy and numexpr before upgrading pandas if upgrading pandas gives you an error. 
+                * You may have to upgrade ``numpy`` and ``numexpr`` before upgrading ``pandas`` if upgrading ``pandas`` gives you an error. 
                 The command to upgrade numpy and numexpr is the same 
                 
-                        pip install numpy --upgrade 
+                        ``pip install numpy --upgrade`` 
                         
-                        pip install numexpr --upgrade 
+                        ``pip install numexpr --upgrade`` 
                         
         #. Download the code from MOOCdb github. The three code repositories that you would download are 
-         *https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.diagnosis
+         *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.diagnosis``
          
-         *https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe
+         *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe``
          
-         *https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe
+         *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe``
          
          
 **************************************
@@ -122,7 +122,7 @@ user and have mechanisms to store user information with multiple hash.
     #. Run JSON to relation code 
 
         This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
-        JSON tracking log file is stored with other raw data files. We will call the raw data files "raw data" and the output CSV "intermediary CSV".
+        JSON tracking log file is stored with other raw data files. We will call the raw data files ``raw data`` and the output CSV ``intermediary CSV``.
 
         Let us suppose that we want to pipe the course named <course_name>,
         We assume raw data is stored in the folder :
@@ -153,7 +153,7 @@ user and have mechanisms to store user information with multiple hash.
 
     #. Run relation to MOOCdb 
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
-        We will call the source CSV “intermediary CSV” and the output CSV “MOOCdb CSV”.
+        We will call the source CSV ``intermediary CSV`` and the output CSV ``MOOCdb CSV``.
 
         Let us suppose that we want to pipe to MOOCdb the course named <course_name>.
         We assume that the course’s log file has been processed by json_to_relation, 
@@ -165,12 +165,12 @@ user and have mechanisms to store user information with multiple hash.
 
               ``/.../<course_name>/moocdb_csv/``
 
-            a. Edit import.openedx.relation_to_moocdb/config.py
+            a. Edit ``import.openedx.qpipe/config.py``
                 **The variables not mentionned in the tutorial must simply be left untouched.**
       
             b. QUOTECHAR : the quote character used in the intermediary CSV files. Most commonly a single quote : ‘
    
-            c. TIMESTAMP_FORMAT : describes the timestamp pattern used in *_EdxTrackEventTable.csv intermediary CSV file. 
+            c. TIMESTAMP_FORMAT : describes the timestamp pattern used in ``*_EdxTrackEventTable.csv`` intermediary CSV file. 
                See python doc to understand syntax.
    
             d. COURSE_NAME: the name of the folder containing the intermediary CSV files. Here, <course_name>.
@@ -188,19 +188,19 @@ user and have mechanisms to store user information with multiple hash.
                To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
 
     #. Launch the piping
-        When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
-        From within the import.openedx.relation_to_moocdb folder, run command :
+        When the variables mentioned above have been correctly edited in ``config.py``, the script is ready to launch. 
+        From within the ``import.openedx.qpipe`` folder, run command :
    
             ``time python main.py``
 
     #. Delete log file
-        When the piping is done, if everything went well, go to the output directory /.../<course_name>/moocdb_csv/ and 
-        delete the log.org file that takes a lot of space.
+        When the piping is done, if everything went well, go to the output directory ``/.../<course_name>/moocdb_csv/`` and 
+        delete the ``log.org`` file that takes a lot of space.
 
     #. Load course into MySQL
-        Copy the file /.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql to /.../<course_name>/moocdb_csv/ folder.
-        Change directory to /.../<course_name>/moocdb_csv/
-        Replace ‘6002x_spring_2013’ by <course_name> in moocdb.sql file.
+        Copy the file ``/.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql`` to ``/.../<course_name>/moocdb_csv/`` folder.
+        Change directory to ``/.../<course_name>/moocdb_csv/``
+        Replace ``6002x_spring_2013`` by <course_name> in ``moocdb.sql`` file.
 
         Run command :
 
