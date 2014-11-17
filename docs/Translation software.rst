@@ -22,8 +22,8 @@ Step 1: Installing the required packages or downloading a VM
 **************************************
 
  * Option 1: To run the software you may want to download a VM from Amazon cloud. This virtual machine image comes with all 
-  packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
-  kalyan@csail.mit.edu. 
+   packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
+   kalyan@csail.mit.edu. 
   
         * When instantiating this virtual machine on Amazon or locally, please provision the disk space (hard disk) 
           such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
