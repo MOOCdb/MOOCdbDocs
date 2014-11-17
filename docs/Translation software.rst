@@ -16,9 +16,11 @@ Files from edX for a course called <course name>
 
 To process the tracking log files and get into MOOCdb format, we provide the following detailed instructions. First step is to install a machine with 
 required packages and disk space. 
+
 **************************************
 Step 1: Installing the required packages or downloading a VM 
 **************************************
+
  * Option 1: To run the software you may want to download a VM from Amazon cloud. This virtual machine image comes with all 
   packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
   kalyan@csail.mit.edu. 
