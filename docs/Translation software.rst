@@ -158,7 +158,29 @@ user and have mechanisms to store user information with multiple hash.
         As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the path to the destination folder, 
         and second argument is the tracking log json file to pipe. ``/.../`` represents the path to the directory where the <course_name> folder is located on your machine. 
         The command may run for a few hours and depends on the size of the 
-        raw json tracking log file.The output csv files will be in ``/.../<course_name>/intermediary_csv``. 
+        raw json tracking log file.The output csv files will be in ``/.../<course_name>/intermediary_csv``. The following gives 
+        an example of the output csv files produced for link5_10x course:
+        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_CorrectMapTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EdxTrackEventTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EventIpTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_InputStateTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_LoadInfoTable.csv``
+                        
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv``
+        
 
     #. Run relation to MOOCdb 
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
@@ -186,11 +208,13 @@ user and have mechanisms to store user information with multiple hash.
    
             e. ``CSV_PREFIX`` : All the intermediary CSV file names in 
    
-                ``/.../<course_name>/intermediary_csv/``
+                  ``/.../<course_name>/intermediary_csv/``
          
                 share a common prefix that was generated when running JSON to relation. 
       
-                This prefix is also the name of the only .sql file in the folder. 
+                This prefix is also the name of the only .sql file in the folder. In the above case this prefix would be :
+                
+                  ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
       
             f. ``DOMAIN``: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
                (No slash at the end of the domain name) 
