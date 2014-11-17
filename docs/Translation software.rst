@@ -223,7 +223,3 @@ and contains the detailed clickstream events. These are the events which are rec
 
 
 
-
-        
-
-
