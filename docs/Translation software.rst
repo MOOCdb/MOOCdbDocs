@@ -21,9 +21,10 @@ required packages and disk space.
 Step 1: Installing the required packages or downloading a VM 
 **************************************
 
- * Option 1: To run the software you may want to download a VM from Amazon cloud. This virtual machine image comes with all 
-   packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
-   kalyan@csail.mit.edu. 
+ * Option 1: To run the software you may want to download a VM from Amazon cloud. 
+      This virtual machine image comes with all 
+      packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
+      kalyan@csail.mit.edu. 
   
         * When instantiating this virtual machine on Amazon or locally, please provision the disk space (hard disk) 
           such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
@@ -108,7 +109,7 @@ and contains the detailed clickstream events. These are the events which are rec
 One of the problem with our current delivery is that a user is identified by a number of items ; id, user_id, username, hashid, name, first_name, last_name 
 and it is not clear how they are linked and where they are redundancies. We automatically link and clean this up and create a hash_id per 
 user and have mechanisms to store user information with multiple hash. 
-    #. Unzip tracking log file
+    #. *Unzip tracking log file*
         All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of <course_name>__<creation date>, we will 
         call the prefix COURSE_PREFIX
 
@@ -119,7 +120,7 @@ user and have mechanisms to store user information with multiple hash.
         This will extract the tracking log file into .json format, ready to be piped.
 
     #. If there are multiple log files, merge all the log files for a single course into one log file 
-    #. Run JSON to relation code 
+    #. *Run JSON to relation code*
 
         This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
         JSON tracking log file is stored with other raw data files. We will call the raw data files ``raw data`` and the output CSV ``intermediary CSV``.
