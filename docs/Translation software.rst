@@ -103,7 +103,9 @@ and contains the detailed clickstream events. These are the events which are rec
      - Contains information about wiki article revisions done by the students
    * - <course name>__forum.mongo
      - csv
-     - contains forum posts etc made by the users 
+     - contains forum posts etc made by the users
+     
+     Given the table of the data and types we now go through the steps you have to take to transform the log files. 
 
     #. Unzip tracking log file
         All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of ``<course_name>__<creation date>``, we will 
