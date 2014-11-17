@@ -222,4 +222,11 @@ and contains the detailed clickstream events. These are the events which are rec
         This creates a database named <course_name> in MySQL, and loads the CSV data into it. 
 
 
-
+Translation details 
++++++++++++++++++++++
+Some examples contextualized presented via the two urls below show for an actual course show how the translation from raw JSON logs to MOOCdb takes place  
+        http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
+        
+        http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
+        
+More details can be found in Quentin Agrens thesis here
