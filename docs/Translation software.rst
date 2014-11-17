@@ -127,15 +127,15 @@ user and have mechanisms to store user information with multiple hash.
         Let us suppose that we want to pipe the course named <course_name>,
         We assume raw data is stored in the folder :
    
-            ``.../<course_name>/log_data/``
+            ``/.../<course_name>/log_data/``
      
         Create a folder called intermeidary_csv under the folder named <course_name>
    
-            ``.../<course_name>/intermediary_csv/``
+            ``/.../<course_name>/intermediary_csv/``
      
         Create another folder called moocdb_csv under the folder named <course_name>
    
-            ``.../<course_name>/moocdb_csv/``
+            ``/.../<course_name>/moocdb_csv/``
 
     #. Launch the piping
 
@@ -146,10 +146,10 @@ user and have mechanisms to store user information with multiple hash.
         
         ``/../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
 
-        As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, 
-        and second argument is the tracking log json file to pipe. 
-        The command may run for a few hours to a few days depends on the size of the 
-        raw json tracking log file.The output csv files will be in /.../<course_name>/intermediary_csv
+        As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the path to the destination folder, 
+        and second argument is the tracking log json file to pipe. ``/.../`` represents the path to the directory where the <course_name> folder is located on your machine. 
+        The command may run for a few hours and depends on the size of the 
+        raw json tracking log file.The output csv files will be in ``/.../<course_name>/intermediary_csv``. 
 
     #. Run relation to MOOCdb 
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
