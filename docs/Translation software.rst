@@ -167,14 +167,22 @@ user and have mechanisms to store user information with multiple hash.
 
    a. Edit import.openedx.relation_to_moocdb/config.py
       **The variables not mentionned in the tutorial must simply be left untouched.**
+      
    b. QUOTECHAR : the quote character used in the intermediary CSV files. Most commonly a single quote : ‘
+   
    c. TIMESTAMP_FORMAT : describes the timestamp pattern used in *_EdxTrackEventTable.csv intermediary CSV file. 
    See python doc to understand syntax.
+   
    d. COURSE_NAME: the name of the folder containing the intermediary CSV files. Here, <course_name>.
+   
    e. CSV_PREFIX : All the intermediary CSV file names in 
+   
          ``/.../<course_name>/intermediary_csv/``
+         
       share a common prefix that was generated when running JSON to relation. 
+      
       This prefix is also the name of the only .sql file in the folder. 
+      
    f. DOMAIN: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
    (No slash at the end of the domain name) 
    To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
@@ -182,6 +190,7 @@ user and have mechanisms to store user information with multiple hash.
 #. Launch the piping
    When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
    From within the import.openedx.relation_to_moocdb folder, run command :
+   
       ``time python main.py``
 
 #. Delete log file
