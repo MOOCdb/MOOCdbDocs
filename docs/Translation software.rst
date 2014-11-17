@@ -117,7 +117,7 @@ user and have mechanisms to store user information with multiple hash.
       
    This will extract the tracking log file into .json format, ready to be piped.
 
-#. Merge all the log files for a single course into one log file 
+#. If there are multiple log files, merge all the log files for a single course into one log file 
 
 #. Run JSON to relation code 
 
@@ -126,10 +126,15 @@ user and have mechanisms to store user information with multiple hash.
 
    Let us suppose that we want to pipe the course named <course_name>,
    We assume raw data is stored in the folder :
+   
      ``.../<course_name>/log_data/``
-   We would first create a folder called intermeidary_csv under the folder named <course_name>
+     
+   Create a folder called intermeidary_csv under the folder named <course_name>
+   
      ``.../<course_name>/intermediary_csv/``
-  We would create another folder called moocdb_csv under the folder named <course_name>
+     
+   Create another folder called moocdb_csv under the folder named <course_name>
+   
       ``.../<course_name>/moocdb_csv/``
 
 #. Launch the piping
@@ -139,14 +144,14 @@ user and have mechanisms to store user information with multiple hash.
    ``bash scripts/transformGivenLogfiles.sh 
    /.../<course_name>/intermediary_csv/ /../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
 
-   As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, and second argument
-   is the tracking log json file to pipe. The command may run for a few hours to a few days depends on the size of the raw json tracking log file.The output csv files will be in /data/csv/intermediary_csv/<course_name>
+   As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, 
+   and second argument is the tracking log json file to pipe. 
+   The command may run for a few hours to a few days depends on the size of the 
+   raw json tracking log file.The output csv files will be in /.../<course_name>/intermediary_csv
 
-****************************************
-Translation Stage 2 - Relation-to-MOOCdb
-****************************************
 
-#. Prerequisites
+
+#. Run relation to MOOCdb 
    This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
    We will call the source CSV “intermediary CSV” and the output CSV “MOOCdb CSV”.
 
@@ -154,25 +159,25 @@ Translation Stage 2 - Relation-to-MOOCdb
    We assume that the course’s log file has been processed by json_to_relation, 
    and that the output files are stored in the folder :
 
-      ``/data/csv/intermediary_csv/<course_name>``
+      ``/.../<course_name>/intermediary_csv/``
 
    We want the MOOCdb CSV to be written to folder 
 
-      ``/data/csv/moocdb_csv/<course_name>``
+      ``/.../<course_name>/moocdb_csv/``
 
-#. Create folder /data/csv/moocdb_csv/<course_name>
-
-   For minimal hassle, the MOOCdb CSV folder **must have the same name as the intermediary CSV folder**. Here, <course_name>. 
-   
    a. Edit import.openedx.relation_to_moocdb/config.py
       **The variables not mentionned in the tutorial must simply be left untouched.**
    b. QUOTECHAR : the quote character used in the intermediary CSV files. Most commonly a single quote : ‘
-   c. TIMESTAMP_FORMAT : describes the timestamp pattern used in *_EdxTrackEventTable.csv intermediary CSV file. See python doc to understant syntax.
+   c. TIMESTAMP_FORMAT : describes the timestamp pattern used in *_EdxTrackEventTable.csv intermediary CSV file. 
+   See python doc to understand syntax.
    d. COURSE_NAME: the name of the folder containing the intermediary CSV files. Here, <course_name>.
    e. CSV_PREFIX : All the intermediary CSV file names in 
-         ``/data/csv/intermediary_csv/<course_name>``
-      share a common prefix that was generated when running JSON to relation. This prefix is also the name of the only .sql file in the folder. 
-   f. DOMAIN: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. (No slash at the end of the domain name) To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
+         ``/.../<course_name>/intermediary_csv/``
+      share a common prefix that was generated when running JSON to relation. 
+      This prefix is also the name of the only .sql file in the folder. 
+   f. DOMAIN: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
+   (No slash at the end of the domain name) 
+   To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
 
 #. Launch the piping
    When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
@@ -180,11 +185,12 @@ Translation Stage 2 - Relation-to-MOOCdb
       ``time python main.py``
 
 #. Delete log file
-   When the piping is done, if everything went well, go to the output directory /data/csv/moocdb_csv/<course_name> and delete the log.org file that takes a lot of space.
+   When the piping is done, if everything went well, go to the output directory /.../<course_name>/moocdb_csv/ and 
+   delete the log.org file that takes a lot of space.
 
 #. Load course into MySQL
-   Copy the file /data/csv/moocdb_csv/6002x_2013_spring/moocdb.sql to /data/csv/moocdb_csv/<course_name> folder.
-   Change directory to /data/csv/moocdb_csv/<course_name>
+   Copy the file /.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql to /.../<course_name>/moocdb_csv/ folder.
+   Change directory to /.../<course_name>/moocdb_csv/
    Replace ‘6002x_spring_2013’ by <course_name> in moocdb.sql file.
 
    Run command :
