@@ -13,10 +13,28 @@ edx
 **********************
 Files from edX for a course called <course name>
 **********************
-If your course is through edX you would get the files shown below. The most important and perhaps most tedious to process is the tracking log files. 
+If your course is through edX you would get the files shown below. The most important and perhaps most tedious is
+processing the tracking log files. 
 To process the tracking log files and get into MOOCdb format, we provide the following detailed instructions. 
- * To run the software you may want to download the VM from . And request the pem file from kalyan@csail.mit.edu. 
- * Provision the disk space (hard disk) such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs. 
+ * Option 1: To run the software you may want to download a VM from Amazon cloud. This virtual machine image comes with all 
+  packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
+  kalyan@csail.mit.edu. 
+        * When instantiating this virtual machine on Amazon or locally, please provision the disk space (hard disk) 
+          such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
+ * Option 2: Install all the packages on your local machine 
+        * The following packages are required on a MOOCdb machine 
+        #. Unidecode package available at 
+        #. ijson package available at 
+        #. install python-setuptools
+        #. install pip using sudo easy_install pip
+        #. Install pandas 
+                * Make sure your Pandas version is higher than 0.14.0. If it is below that you would have to update Pandas by 
+                running 
+                        pip install pandas --upgrade 
+                * You may have to upgrade numpy and numexpr before upgrading pandas if upgrading pandas gives you an error. 
+                The command to upgrade numpy and numexpr is the same 
+                        pip install numpy --upgrade 
+                        pip install numexpr --upgrade 
  * Download the code from MOOCdb github. The three code repositories that you would download are 
          *https://github.com/MOOCdb/import.openedx.diagnosis
          
