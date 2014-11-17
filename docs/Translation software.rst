@@ -108,7 +108,6 @@ user and have mechanisms to store user information with multiple hash.
 
 
 Run JSON to relation code 
-**************************************
 
 #. Prerequisites
    This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
