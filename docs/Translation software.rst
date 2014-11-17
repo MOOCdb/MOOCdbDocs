@@ -109,7 +109,7 @@ and it is not clear how they are linked and where they are redundancies. We auto
 user and have mechanisms to store user information with multiple hash. 
 
 
-#. Unzip tracking log file
+    #. Unzip tracking log file
    All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of <course_name>__<creation date>, we will 
    call the prefix COURSE_PREFIX
 
@@ -119,9 +119,9 @@ user and have mechanisms to store user information with multiple hash.
       
    This will extract the tracking log file into .json format, ready to be piped.
 
-#. If there are multiple log files, merge all the log files for a single course into one log file 
+    #. If there are multiple log files, merge all the log files for a single course into one log file 
 
-#. Run JSON to relation code 
+    #. Run JSON to relation code 
 
    This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
    JSON tracking log file is stored with other raw data files. We will call the raw data files "raw data" and the output CSV "intermediary CSV".
@@ -139,76 +139,76 @@ user and have mechanisms to store user information with multiple hash.
    
       ``.../<course_name>/moocdb_csv/``
 
-#. Launch the piping
+    #. Launch the piping
 
-   From within the import.openedx.json_to_relation folder, run command:
+        From within the import.openedx.json_to_relation folder, run command:
 
-   ``bash scripts/transformGivenLogfiles.sh 
-   /.../<course_name>/intermediary_csv/ /../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
+        ``bash scripts/transformGivenLogfiles.sh 
+        /.../<course_name>/intermediary_csv/ /../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
 
-   As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, 
-   and second argument is the tracking log json file to pipe. 
-   The command may run for a few hours to a few days depends on the size of the 
-   raw json tracking log file.The output csv files will be in /.../<course_name>/intermediary_csv
+        As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the destination folder, 
+        and second argument is the tracking log json file to pipe. 
+        The command may run for a few hours to a few days depends on the size of the 
+        raw json tracking log file.The output csv files will be in /.../<course_name>/intermediary_csv
 
 
 
-#. Run relation to MOOCdb 
-   This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
-   We will call the source CSV “intermediary CSV” and the output CSV “MOOCdb CSV”.
+    #. Run relation to MOOCdb 
+        This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
+        We will call the source CSV “intermediary CSV” and the output CSV “MOOCdb CSV”.
 
-   Let us suppose that we want to pipe to MOOCdb the course named <course_name>.
-   We assume that the course’s log file has been processed by json_to_relation, 
-   and that the output files are stored in the folder :
+        Let us suppose that we want to pipe to MOOCdb the course named <course_name>.
+        We assume that the course’s log file has been processed by json_to_relation, 
+        and that the output files are stored in the folder :
 
-      ``/.../<course_name>/intermediary_csv/``
+              ``/.../<course_name>/intermediary_csv/``
 
-   We want the MOOCdb CSV to be written to folder 
+        We want the MOOCdb CSV to be written to folder 
 
       ``/.../<course_name>/moocdb_csv/``
 
-   a. Edit import.openedx.relation_to_moocdb/config.py
-      **The variables not mentionned in the tutorial must simply be left untouched.**
+            a. Edit import.openedx.relation_to_moocdb/config.py
+                **The variables not mentionned in the tutorial must simply be left untouched.**
       
-   b. QUOTECHAR : the quote character used in the intermediary CSV files. Most commonly a single quote : ‘
+            b. QUOTECHAR : the quote character used in the intermediary CSV files. Most commonly a single quote : ‘
    
-   c. TIMESTAMP_FORMAT : describes the timestamp pattern used in *_EdxTrackEventTable.csv intermediary CSV file. 
-   See python doc to understand syntax.
+            c. TIMESTAMP_FORMAT : describes the timestamp pattern used in *_EdxTrackEventTable.csv intermediary CSV file. 
+               See python doc to understand syntax.
    
-   d. COURSE_NAME: the name of the folder containing the intermediary CSV files. Here, <course_name>.
+            d. COURSE_NAME: the name of the folder containing the intermediary CSV files. Here, <course_name>.
    
-   e. CSV_PREFIX : All the intermediary CSV file names in 
+            e. CSV_PREFIX : All the intermediary CSV file names in 
    
-         ``/.../<course_name>/intermediary_csv/``
+                ``/.../<course_name>/intermediary_csv/``
          
-      share a common prefix that was generated when running JSON to relation. 
+                share a common prefix that was generated when running JSON to relation. 
       
-      This prefix is also the name of the only .sql file in the folder. 
+                This prefix is also the name of the only .sql file in the folder. 
       
-   f. DOMAIN: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
+            f. DOMAIN: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
    (No slash at the end of the domain name) 
    To be sure, you can look at the URLs appearing *_EdxTrackEventTable.csv intermediary CSV file.
 
-#. Launch the piping
-   When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
-   From within the import.openedx.relation_to_moocdb folder, run command :
+    #. Launch the piping
+        When the variables mentioned above have been correctly edited in config.py, the script is ready to launch. 
+        From within the import.openedx.relation_to_moocdb folder, run command :
    
       ``time python main.py``
 
-#. Delete log file
-   When the piping is done, if everything went well, go to the output directory /.../<course_name>/moocdb_csv/ and 
-   delete the log.org file that takes a lot of space.
+    #. Delete log file
+        When the piping is done, if everything went well, go to the output directory /.../<course_name>/moocdb_csv/ and 
+        delete the log.org file that takes a lot of space.
 
-#. Load course into MySQL
-   Copy the file /.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql to /.../<course_name>/moocdb_csv/ folder.
-   Change directory to /.../<course_name>/moocdb_csv/
-   Replace ‘6002x_spring_2013’ by <course_name> in moocdb.sql file.
+    #. Load course into MySQL
+        Copy the file /.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql to /.../<course_name>/moocdb_csv/ folder.
+        Change directory to /.../<course_name>/moocdb_csv/
+        Replace ‘6002x_spring_2013’ by <course_name> in moocdb.sql file.
 
-   Run command :
+        Run command :
 
-      ``mysql -u root -p --local-infile=1 < moocdb.sql``
+             ``mysql -u root -p --local-infile=1 < moocdb.sql``
 
-   This creates a database named <course_name> in MySQL, and loads the CSV data into it. 
+        This creates a database named <course_name> in MySQL, and loads the CSV data into it. 
 
 
 
