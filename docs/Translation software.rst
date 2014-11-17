@@ -10,10 +10,6 @@ three different platforms-edX, OpenedX and Coursera.
 edx
 ===
 
-**********************
-Files from edX for a course called <course name>
-**********************
-
 To process the tracking log files and get into MOOCdb format, we provide the following detailed instructions. First step is to install a machine with 
 required packages and disk space. 
 
@@ -52,7 +48,7 @@ Step 1: Installing the required packages or downloading a VM
                         
                         ``pip install numexpr --upgrade`` 
                         
-        #. Download the code from MOOCdb github. The three code repositories that you would download are 
+        #. Download the code from MOOCdb github:
          *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.diagnosis``
          
          *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe``
@@ -61,7 +57,7 @@ Step 1: Installing the required packages or downloading a VM
          
          
 **************************************
-Step 2: Running the translation software 
+Step 2: Processing the tracking logs  
 **************************************
 
 If your course is through edX you would get the files shown below. The most important and perhaps most tedious is
@@ -109,11 +105,7 @@ and contains the detailed clickstream events. These are the events which are rec
      - csv
      - contains forum posts etc made by the users 
 
-  
 
-One of the problem with our current delivery is that a user is identified by a number of items ; id, user_id, username, hashid, name, first_name, last_name 
-and it is not clear how they are linked and where they are redundancies. We automatically link and clean this up and create a hash_id per 
-user and have mechanisms to store user information with multiple hash. 
 
     #. Unzip tracking log file
         All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of ``<course_name>__<creation date>``, we will 
@@ -231,14 +223,7 @@ user and have mechanisms to store user information with multiple hash.
 
 
 
-Translation details 
-+++++++++++++++++++++
-Some examples contextualized presented via the two urls below show for an actual course show how the translation from raw JSON logs to MOOCdb takes place  
-        http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
-        
-        http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
-        
-More details can be found in Quentin Agrens thesis here
+
         
 
 
