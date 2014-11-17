@@ -105,8 +105,6 @@ and contains the detailed clickstream events. These are the events which are rec
      - csv
      - contains forum posts etc made by the users 
 
-
-
     #. Unzip tracking log file
         All raw data files in ``data/raw/<course_name>`` have the same prefix in the format of ``<course_name>__<creation date>``, we will 
         call the prefix ``COURSE_PREFIX``
