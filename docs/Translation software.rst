@@ -7,8 +7,6 @@ software and different assumptions and heuristics used during the translation.Cu
 three different platforms-edX, OpenedX and Coursera. 
 
 
-Kalyan makes this changes blah blah blah 
-
 ===
 edx
 ===
