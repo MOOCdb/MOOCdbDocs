@@ -6,8 +6,6 @@ This document describes in detail how the translation is done from the raw data 
 software and different assumptions and heuristics used during the translation.Currently translation software is available for 
 three different platforms-edX, OpenedX and Coursera. 
 
-Kannappan writes blah blah blah
-
 ===
 edx
 ===
@@ -20,43 +18,54 @@ Step 1: Installing the required packages or downloading a VM
 **************************************
 
  * Option 1: To run the software you may want to download a VM from Amazon cloud. 
+ 
       This virtual machine image comes with all 
       packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
       kalyan@csail.mit.edu. 
+      
+      
+ .. important:: 
   
-        * When instantiating this virtual machine on Amazon or locally, please provision the disk space (hard disk) 
-          such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
+   * When instantiating this virtual machine on Amazon or locally, please provision the disk space (hard disk) 
+     such that there is atlease three times the size of the decrypted- uncompressed file size of the tracking logs.
+  
+  
  * Option 2: Install all the packages on your local machine 
+ 
         The following packages are required on a MOOCdb machine 
         
-        #. Install ``Unidecode`` package available at 
+        #. Install **Unidecode** package available at 
         
-        #. Install ``ijson`` package available at 
+        #. Install **ijson** package available at 
         
-        #. Install ``python-setuptools``
+        #. Install **python-setuptools**
         
-        #. Install ``pip`` using 
+        #. Install **pip** using **sudo easy_install pip**
         
-              ``sudo easy_install pip``
-        #. Install ``pandas`` 
-                * Make sure your Pandas version is higher than ``0.14.0``. If it is below that you would have to update Pandas by running 
+        #. Install **pandas**
+        
+                * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
                         
-                        ``pip install pandas --upgrade`` 
+                        **pip install pandas --upgrade** 
                         
-                * You may have to upgrade ``numpy`` and ``numexpr`` before upgrading ``pandas`` if upgrading ``pandas`` gives you an error. 
+                * You may have to upgrade **numpy** and **numexpr** before upgrading **pandas** if upgrading **pandas** gives you an error. 
                 The command to upgrade numpy and numexpr is the same 
                 
-                        ``pip install numpy --upgrade`` 
+                        **pip install numpy --upgrade** 
                         
-                        ``pip install numexpr --upgrade`` 
+                        **pip install numexpr --upgrade** 
                         
         #. Download the code from MOOCdb github:
-         *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.diagnosis``
+        
+         `Openedx diagnosis`_
          
-         *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe``
+         `Openedx apipe`_
          
-         *``https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe``
+         `Openedx qpipe`_
          
+         .. _openedx diagnosis: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.diagnosis
+         .. _openedx apipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe
+         .. _openedx qpipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe
          
 **************************************
 Step 2: Processing the tracking logs  
