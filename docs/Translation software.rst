@@ -6,6 +6,7 @@ This document describes in detail how the translation is done from the raw data 
 software and different assumptions and heuristics used during the translation.Currently translation software is available for 
 three different platforms-edX, OpenedX and Coursera. 
 
+Kannappan writes blah blah blah
 
 ===
 edx
