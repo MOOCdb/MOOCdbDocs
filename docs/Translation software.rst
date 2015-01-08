@@ -3,8 +3,8 @@ Translation software documentation
 #############
 
 This document describes in detail how the translation is done from the raw data files Coursera and edX provide and how to run the 
-software and different assumptions and heuristics used during the translation.Currently translation software is available for 
-three different platforms-edX, OpenedX and Coursera. 
+software and different assumptions and heuristics used during the translation. Currently translation software is available for 
+three different platforms - edX, OpenedX and Coursera. 
 
 ===
 edx
@@ -17,10 +17,9 @@ required packages and disk space.
 Step 1: Installing the required packages or downloading a VM 
 **************************************
 
- * Option 1: To run the software you may want to download a VM from Amazon cloud. 
+* Option 1: To run the software you may want to download a VM from Amazon cloud. 
  
-      This virtual machine image comes with all 
-      packages installed required to run the MOOCdb pipeline. To get a link to the image and request the pem file, please email
+      This virtual machine image comes with all packages installed which are required to run the MOOCdb pipeline. To get a link to the image and request the '.pem' file, please email
       kalyan@csail.mit.edu. 
       
       
@@ -34,9 +33,9 @@ Step 1: Installing the required packages or downloading a VM
  
         The following packages are required on a MOOCdb machine 
         
-        #. Install **Unidecode** package available at 
+        #. Install **Unidecode** package `available here`_
         
-        #. Install **ijson** package available at 
+        #. Install **ijson** package which can be `found here`_
         
         #. Install **python-setuptools**
         
@@ -44,10 +43,11 @@ Step 1: Installing the required packages or downloading a VM
         
         #. Install **pandas**
         
-                * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
-                        
-                        **pip install pandas --upgrade** 
-                        
+ .. Note::   
+ 
+* Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
+      **pip install pandas --upgrade**
+
                 * You may have to upgrade **numpy** and **numexpr** before upgrading **pandas** if upgrading **pandas** gives you an error. 
                 The command to upgrade numpy and numexpr is the same 
                 
@@ -63,6 +63,8 @@ Step 1: Installing the required packages or downloading a VM
          
          `Openedx qpipe`_
          
+         .. _available here: https://pypi.python.org/pypi/Unidecode
+         .. _found here: https://pypi.python.org/pypi/ijson
          .. _openedx diagnosis: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.diagnosis
          .. _openedx apipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe
          .. _openedx qpipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe
