@@ -77,7 +77,7 @@ processing the tracking log files. Some of the files listed below in the table c
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
 .. list-table::
-   :widths: 20 10 40
+   :widths: 20 10 20
    :header-rows: 1
 
    * - File
@@ -124,7 +124,7 @@ Note: Given the table of the data and types we now go through the steps you have
         call the prefix **COURSE_PREFIX**
 
         From within the tracking log file folder, run command:
- ::
+ :
           **gzip -d COURSE_PREFIX__tracking_log.json.gz**
  
         This will extract the tracking log file into .json format, ready to be piped.
