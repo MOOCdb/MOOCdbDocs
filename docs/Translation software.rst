@@ -57,7 +57,7 @@ Step 1: Installing the required packages or downloading a VM
          .. _openedx apipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe
          .. _openedx qpipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe
          
- ..Note::   
+ .. Note::   
  
   * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running: 
   
@@ -82,7 +82,7 @@ and contains the detailed clickstream events. These are the events which are rec
 
    * - File
      - Type
-     - content
+     - Content
    * - <course name>__profiles.csv 
      - csv
      - contains PII information about the learner
