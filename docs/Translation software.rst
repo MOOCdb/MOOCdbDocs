@@ -118,42 +118,39 @@ and contains the detailed clickstream events. These are the events which are rec
         - contains forum posts etc made by the users
 
 
-.. Note:: 
+.. note:: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
 
-Given the table of the data and types we now go through the steps you have to take to transform the log files. 
-
-   #. Unzip tracking log file.
+   #. Unzip tracking log file:
     
-       All raw data files in **data/raw/<course_name>** have the same prefix in the format of **<course_name>__<creation date>**, we will call the prefix **COURSE_PREFIX**
+      All raw data files in **'data/raw/<course_name>'** have the same prefix in the format of '**<course_name>__<creation date>**', we will call the prefix '**COURSE_PREFIX**'.
 
-        From within the tracking log file folder, run command:
+      From within the tracking log file folder, run the command:
         
         ``gzip -d COURSE_PREFIX__tracking_log.json.gz``
  
-        This will extract the tracking log file into .json format, ready to be piped.
+      This will extract the tracking log file into .json format, ready to be piped.
 
-   #. If there are multiple log files, merge all the log files for a single course into one log file 
+   #. If there are multiple log files, merge all the log files for a single course into one log file.
     
-    
-   #. Run JSON to relation code (a.k.a apipe)
+      
+   #. Run JSON to relation code (a.k.a apipe):
 
         This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
-        JSON tracking log file is stored with other raw data files. We will call the raw data files **raw data** and the output CSV **intermediary CSV**.
+        JSON tracking log file is stored with other raw data files. We will call the raw data files as '**raw data**' and the output CSV as '**intermediary CSV**'.
 
-        Let us suppose that we want to pipe the course named <course_name>,
-        We assume raw data is stored in the folder :
+        Let us suppose that we want to pipe the course named '**<course_name>**'. We assume that the raw data is stored in the folder:
    
             ``/.../<course_name>/log_data/``
      
-        Create a folder called intermeidary_csv under the folder named <course_name>
+        Create a folder called intermeidary_csv under the folder named '**<course_name>**'
    
             ``/.../<course_name>/intermediary_csv/``
      
-        Create another folder called moocdb_csv under the folder named <course_name>
+        Create another folder called moocdb_csv under the folder named '**<course_name>**'
    
             ``/.../<course_name>/moocdb_csv/``
 
-   #. Launch the piping
+   #. Launch the piping:
 
         From within the import.openedx.json_to_relation folder, run command:
 
@@ -163,9 +160,9 @@ Given the table of the data and types we now go through the steps you have to ta
         ``/../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
 
         As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the path to the destination folder, 
-        and second argument is the tracking log json file to pipe. **/.../** represents the path to the directory where the <course_name> folder is located on your machine. 
+        and second argument is the tracking log json file to pipe. '**/.../**' represents the path to the directory where the <course_name> folder is located on your machine. 
         The command may run for a few hours and depends on the size of the 
-        raw json tracking log file.The output csv files will be in **/.../<course_name>/intermediary_csv**. The following gives 
+        raw json tracking log file.The output csv files will be in '**/.../<course_name>/intermediary_csv**'. The following gives 
         an example of the output csv files produced for link5_10x course:
         
         
@@ -181,11 +178,12 @@ Given the table of the data and types we now go through the steps you have to ta
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv``
         
 
-   #. Run relation to MOOCdb (a.k.a qpipe)
+   #. Run relation to MOOCdb (a.k.a qpipe):
+   
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
-        We will call the source CSV **intermediary CSV** and the output CSV **MOOCdb CSV**.
+        We will call the source CSV as '**intermediary CSV**' and the output CSV as '**MOOCdb CSV**'.
 
-        Let us suppose that we want to pipe to MOOCdb the course named <course_name>.
+        Let us suppose that we want to pipe to MOOCdb the course named **'<course_name>'**.
         We assume that the course’s log file has been processed by json_to_relation, 
         and that the output files are stored in the folder :
 
@@ -196,47 +194,48 @@ Given the table of the data and types we now go through the steps you have to ta
               **/.../<course_name>/moocdb_csv/**
 
             a. Edit **import.openedx.qpipe/config.py**
+            
                 **The variables not mentionned in the tutorial must simply be left untouched.**
       
-            b. **QUOTECHAR** : the quote character used in the intermediary CSV files. Most commonly a single quote : ‘
+            b. **QUOTECHAR**: The quote character used in the intermediary CSV files. Most commonly a single quote : ‘
    
-            c. **TIMESTAMP_FORMAT** : describes the timestamp pattern used in ***_EdxTrackEventTable.csv** intermediary CSV file. 
-               See python doc to understand syntax.
+            c. **TIMESTAMP_FORMAT**: describes the timestamp pattern used in '***_EdxTrackEventTable.csv**' intermediary CSV file. See python doc to understand syntax.
    
-            d. **COURSE_NAME**: the name of the folder containing the intermediary CSV files. Here, <course_name>.
+            d. **COURSE_NAME**: The name of the folder containing the intermediary CSV files. Here it is **'<course_name>'**.
    
-            e. **CSV_PREFIX** : All the intermediary CSV file names in 
+            e. **CSV_PREFIX**: All the intermediary CSV file names in 
    
                         **/.../<course_name>/intermediary_csv/**
          
                 share a common prefix that was generated when running JSON to relation. This prefix is also the name of the only .sql file in the folder. For example, in the above case this prefix would be :
                 
-                        **link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql**
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
       
-            f. **DOMAIN**: the domain name of the course platform URL. Most commonly, https://www.edx.org or https://courses.edx.org. 
-               (No slash at the end of the domain name) 
-               To be sure, you can look at the URL's appearing ***_EdxTrackEventTable.csv** intermediary CSV file.
+            f. **DOMAIN**: the domain name of the course platform URL, most commonly they are https://www.edx.org or https://courses.edx.org. 
+               (No slash at the end of the domain name). To be sure, you can look at the URL's appearing '***_EdxTrackEventTable.csv**' intermediary CSV file.
 
-   #. Launch the piping
+   #. Launch the piping:
+   
         When the variables mentioned above have been correctly edited in ``config.py``, the script is ready to launch. 
-        From within the ``import.openedx.qpipe`` folder, run command :
+        From within the ``import.openedx.qpipe`` folder, run the command:
    
             ``time python main.py``
 
-   #. Delete log file
-        When the piping is done, if everything went well, go to the output directory **/.../<course_name>/moocdb_csv/** and 
-        delete the **log.org** file that takes a lot of space.
+   #. Delete log file:
+   
+        When the piping is done, if everything went well, go to the output directory '**/.../<course_name>/moocdb_csv/**' and 
+        delete the '**log.org**' file that takes a lot of space.
 
-   #. Load course into MySQL
-        Copy the file **/.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql** to **/.../<course_name>/moocdb_csv/** folder.
-        Change directory to **/.../<course_name>/moocdb_csv/**
-        Replace **6002x_spring_2013** by <course_name> in ``moocdb.sql`` file.
+   #. Load course into MySQL:
+   
+        Copy the file '**/.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql**' to '**/.../<course_name>/moocdb_csv/**' folder.
+        Change directory to '**/.../<course_name>/moocdb_csv/**'. Replace '6002x_spring_2013' by '<course_name>' in ``moocdb.sql`` file.
 
-        Run command :
+        Run the command:
 
              ``mysql -u root -p --local-infile=1 < moocdb.sql``
 
-        This creates a database named <course_name> in MySQL, and loads the CSV data into it. 
+        This creates a database named '**<course_name>**' in MySQL, and loads the CSV data into it. 
 
 
 Translation details 
