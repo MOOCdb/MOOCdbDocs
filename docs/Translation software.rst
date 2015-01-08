@@ -117,9 +117,9 @@ and contains the detailed clickstream events. These are the events which are rec
      - csv
      - contains forum posts etc made by the users
      
-.. Note:: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
+    .. Note:: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
 
-    #. Unzip tracking log file.
+   #. Unzip tracking log file.
     
        All raw data files in **data/raw/<course_name>** have the same prefix in the format of **<course_name>__<creation date>**, we will 
         call the prefix **COURSE_PREFIX**
@@ -130,10 +130,10 @@ and contains the detailed clickstream events. These are the events which are rec
  
         This will extract the tracking log file into .json format, ready to be piped.
 
-    #. If there are multiple log files, merge all the log files for a single course into one log file 
+   #. If there are multiple log files, merge all the log files for a single course into one log file 
     
     
-    #. Run JSON to relation code (a.k.a apipe)
+   #. Run JSON to relation code (a.k.a apipe)
 
         This tutorial covers the transfer of JSON tracking log file to CSV files. The code is written by Andreas Paepcke from Stanford.
         JSON tracking log file is stored with other raw data files. We will call the raw data files **raw data** and the output CSV **intermediary CSV**.
@@ -151,7 +151,7 @@ and contains the detailed clickstream events. These are the events which are rec
    
             ''/.../<course_name>/moocdb_csv/''
 
-    #. Launch the piping
+   #. Launch the piping
 
         From within the import.openedx.json_to_relation folder, run command:
 
@@ -166,19 +166,21 @@ and contains the detailed clickstream events. These are the events which are rec
         raw json tracking log file.The output csv files will be in **/.../<course_name>/intermediary_csv**. The following gives 
         an example of the output csv files produced for link5_10x course:
         
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_CorrectMapTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EdxTrackEventTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EventIpTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_InputStateTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_LoadInfoTable.csv``
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv``
+        .. code-block:: sql
+        
+                        ''link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_CorrectMapTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EdxTrackEventTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EventIpTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_InputStateTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_LoadInfoTable.csv
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv''
         
 
-    #. Run relation to MOOCdb (a.k.a qpipe)
+   #. Run relation to MOOCdb (a.k.a qpipe)
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
         We will call the source CSV **intermediary CSV** and the output CSV **MOOCdb CSV**.
 
@@ -214,20 +216,20 @@ and contains the detailed clickstream events. These are the events which are rec
                (No slash at the end of the domain name) 
                To be sure, you can look at the URL's appearing ***_EdxTrackEventTable.csv** intermediary CSV file.
 
-    #. Launch the piping
+   #. Launch the piping
         When the variables mentioned above have been correctly edited in ``config.py``, the script is ready to launch. 
         From within the ``import.openedx.qpipe`` folder, run command :
    
             ``time python main.py``
 
-    #. Delete log file
-        When the piping is done, if everything went well, go to the output directory ``/.../<course_name>/moocdb_csv/`` and 
-        delete the ``log.org`` file that takes a lot of space.
+   #. Delete log file
+        When the piping is done, if everything went well, go to the output directory **/.../<course_name>/moocdb_csv/** and 
+        delete the **log.org** file that takes a lot of space.
 
-    #. Load course into MySQL
-        Copy the file ``/.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql`` to ``/.../<course_name>/moocdb_csv/`` folder.
-        Change directory to ``/.../<course_name>/moocdb_csv/``
-        Replace ``6002x_spring_2013`` by <course_name> in ``moocdb.sql`` file.
+   #. Load course into MySQL
+        Copy the file **/.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql** to **/.../<course_name>/moocdb_csv/** folder.
+        Change directory to **/.../<course_name>/moocdb_csv/**
+        Replace **6002x_spring_2013** by <course_name> in ``moocdb.sql`` file.
 
         Run command :
 
@@ -238,9 +240,11 @@ and contains the detailed clickstream events. These are the events which are rec
 
 Translation details 
 +++++++++++++++++++++
+
 Some examples contextualized presented via the two urls below show for an actual course show how the translation from raw JSON logs to MOOCdb takes place  
-        http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
+
+        * `Interaction Scenario`_ http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
         
-        http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
+        * `Problem Check Example`_ http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
         
 More details can be found in Quentin Agrens thesis here
