@@ -169,17 +169,17 @@ and contains the detailed clickstream events. These are the events which are rec
      
      link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql
      link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_CorrectMapTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EdxTrackEventTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EventIpTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_InputStateTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_LoadInfoTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_CorrectMapTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EdxTrackEventTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EventIpTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_InputStateTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_LoadInfoTable.csv
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv
         
 
-   #. Run relation to MOOCdb (a.k.a qpipe):
+   5. Run relation to MOOCdb (a.k.a qpipe):
    
         This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
         We will call the source CSV as '**intermediary CSV**' and the output CSV as '**MOOCdb CSV**'.
