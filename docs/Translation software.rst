@@ -117,19 +117,21 @@ and contains the detailed clickstream events. These are the events which are rec
      - csv
      - contains forum posts etc made by the users
      
-Note: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
+.. Note:: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
 
-    #. Unzip tracking log file
-        All raw data files in **data/raw/<course_name>** have the same prefix in the format of **<course_name>__<creation date>**, we will 
+    #. Unzip tracking log file.
+    
+       All raw data files in **data/raw/<course_name>** have the same prefix in the format of **<course_name>__<creation date>**, we will 
         call the prefix **COURSE_PREFIX**
 
         From within the tracking log file folder, run command:
         
-          : **gzip -d COURSE_PREFIX__tracking_log.json.gz**
+        ''gzip -d COURSE_PREFIX__tracking_log.json.gz''
  
         This will extract the tracking log file into .json format, ready to be piped.
 
     #. If there are multiple log files, merge all the log files for a single course into one log file 
+    
     
     #. Run JSON to relation code (a.k.a apipe)
 
@@ -139,24 +141,24 @@ Note: Given the table of the data and types we now go through the steps you have
         Let us suppose that we want to pipe the course named <course_name>,
         We assume raw data is stored in the folder :
    
-            **/.../<course_name>/log_data/**
+            ''/.../<course_name>/log_data/''
      
         Create a folder called intermeidary_csv under the folder named <course_name>
    
-            **/.../<course_name>/intermediary_csv/**
+            ''/.../<course_name>/intermediary_csv/''
      
         Create another folder called moocdb_csv under the folder named <course_name>
    
-            **/.../<course_name>/moocdb_csv/**
+            ''/.../<course_name>/moocdb_csv/''
 
     #. Launch the piping
 
         From within the import.openedx.json_to_relation folder, run command:
 
-        **bash scripts/transformGivenLogfiles.sh 
-        /.../<course_name>/intermediary_csv/** 
+        ''bash scripts/transformGivenLogfiles.sh 
+        /.../<course_name>/intermediary_csv/'' 
         
-        **/../<course_name>/log_data/COURSE_PREFIX__tracking_log.json**
+        ''/../<course_name>/log_data/COURSE_PREFIX__tracking_log.json''
 
         As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the path to the destination folder, 
         and second argument is the tracking log json file to pipe. **/.../** represents the path to the directory where the <course_name> folder is located on your machine. 
