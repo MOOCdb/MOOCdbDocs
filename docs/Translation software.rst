@@ -44,26 +44,27 @@ Step 1: Installing the required packages or downloading a VM
         #. Install **pandas**
         
  .. Note::   
- 
-  * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
+  
+   * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
   
                         **pip install pandas --upgrade**
 
-  * You may have to upgrade **numpy** and **numexpr** before upgrading **pandas** if upgrading **pandas** gives you an error. 
+   * You may have to upgrade **numpy** and **numexpr** before upgrading **pandas** if upgrading **pandas** gives you an error. 
     The command to upgrade numpy and numexpr is the same 
                 
                         **pip install numpy --upgrade** 
                         
                         **pip install numexpr --upgrade** 
                         
-
-       #. Download the code from MOOCdb github:
+  
+  
+ #. Download the code from MOOCdb github:
         
-         `Openedx diagnosis`_
+           `Openedx diagnosis`_
          
-         `Openedx apipe`_
+           `Openedx apipe`_
          
-         `Openedx qpipe`_
+           `Openedx qpipe`_
          
          .. _available here: https://pypi.python.org/pypi/Unidecode
          .. _found here: https://pypi.python.org/pypi/ijson
