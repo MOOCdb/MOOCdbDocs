@@ -57,7 +57,7 @@ Step 1: Installing the required packages or downloading a VM
          .. _openedx apipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.apipe
          .. _openedx qpipe: https://github.com/MOOCdb/Translation_software/tree/master/edx_to_MOOCdb_piping/import.openedx.qpipe
          
- Note::   
+ ..Note::   
  
   * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running: 
   
@@ -77,7 +77,7 @@ processing the tracking log files. Some of the files listed below in the table c
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
 .. list-table::
-   :widths: 40 10 70
+   :widths: 30 10 60
    :header-rows: 1
 
    * - File
