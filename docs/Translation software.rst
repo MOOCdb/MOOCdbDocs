@@ -165,10 +165,10 @@ and contains the detailed clickstream events. These are the events which are rec
         raw json tracking log file.The output csv files will be in '**/.../<course_name>/intermediary_csv**'. The following gives 
         an example of the output csv files produced for link5_10x course:
         
-   .. code-block:: sql
-    
-   link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql
-   link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv
+    .. code-block:: sql
+     
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql
+     link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_CorrectMapTable.csv
