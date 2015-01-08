@@ -45,11 +45,11 @@ Step 1: Installing the required packages or downloading a VM
         
         #. Download the code from MOOCdb github:
         
-           `Openedx diagnosis`_
+           * `Openedx diagnosis`_
          
-           `Openedx apipe`_
+           * `Openedx apipe`_
          
-           `Openedx qpipe`_
+           * `Openedx qpipe`_
          
          .. _available here: https://pypi.python.org/pypi/Unidecode
          .. _found here: https://pypi.python.org/pypi/ijson
@@ -77,7 +77,7 @@ processing the tracking log files. Some of the files listed below in the table c
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
 .. list-table::
-   :widths: 20 10 50
+   :widths: 20 10 40
    :header-rows: 1
 
    * - File
