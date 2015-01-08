@@ -77,7 +77,7 @@ processing the tracking log files. Some of the files listed below in the table c
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
 .. list-table::
-   :widths: 30 10 60
+   :widths: 20 10 50
    :header-rows: 1
 
    * - File
