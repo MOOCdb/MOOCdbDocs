@@ -76,9 +76,9 @@ If your course is through edX you would get the files shown below. The most impo
 processing the tracking log files. Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
-.. list-table::
-   :widths: 20 10 20
-   :header-rows: 1
+   .. list-table::
+     :widths: 20 10 20
+     :header-rows: 1
 
    * - File
      - Type
@@ -166,7 +166,6 @@ and contains the detailed clickstream events. These are the events which are rec
         raw json tracking log file.The output csv files will be in **/.../<course_name>/intermediary_csv**. The following gives 
         an example of the output csv files produced for link5_10x course:
         
-        .. code-block:: sql
         
                         ''link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv
@@ -243,8 +242,11 @@ Translation details
 
 Some examples contextualized presented via the two urls below show for an actual course show how the translation from raw JSON logs to MOOCdb takes place  
 
-        * `Interaction Scenario`_ http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
+        * `Interaction Scenario`_
         
-        * `Problem Check Example`_ http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
+        * `Problem Check Example`_
+        
+        .. _Interaction Scenario: http://alfa6.csail.mit.edu/moocdbdocs/interaction-scenario.html
+        .. _Problem Check Example: http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
         
 More details can be found in Quentin Agrens thesis here
