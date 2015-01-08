@@ -76,48 +76,51 @@ If your course is through edX you would get the files shown below. The most impo
 processing the tracking log files. Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
-.. list-table::
-   :widths: 40 10 70
-   :header-rows: 1
+   .. list-table::
+      :widths: 40 10 70
+      :header-rows: 1
 
-   * - File
-     - Type
-     - content
-   * - <course name>__profiles.csv 
-     - csv
-     - contains PII information about the learner
-   * - <course name>__tracking_log.json 
-     - json
-     - Clickstream events stored as JSON logs
-   * - <course name>__studentmodule.csv 
-     - csv
-     - Student state information 
-   * - <course name>_user_id_map.csv 
-     - csv
-     - mapping between username, id and hashid 
-   * - <course name>__certificates.csv  
-     - csv
-     - information about certificates for each user_id
-   * - <course name>_users.csv
-     - csv
-     - PII information + meta information like date_joined, last login etc
-   * - <course name>__course_structure-prod-analytics.json 
-     - JSON
-     - Course structure in JSON
-   * - <course name>_wiki_article.csv 
-     - csv
-     - contains the wiki article information
-   * - <course name>__enrollment.csv  
-     - csv
-     - Contains information about enrollment 
-   * - <course name>__wiki_articlerevision.csv 
-     - csv
-     - Contains information about wiki article revisions done by the students
-   * - <course name>__forum.mongo
-     - csv
-     - contains forum posts etc made by the users
+      * - File
+        - Type
+        - content
+      * - <course name>__profiles.csv 
+        - csv
+        - contains PII information about the learner
+      * - <course name>__tracking_log.json 
+        - json
+        - Clickstream events stored as JSON logs
+      * - <course name>__studentmodule.csv 
+        - csv
+        - Student state information 
+      * - <course name>_user_id_map.csv 
+        - csv
+        - mapping between username, id and hashid 
+      * - <course name>__certificates.csv  
+        - csv
+        - information about certificates for each user_id
+      * - <course name>_users.csv
+        - csv
+        - PII information + meta information like date_joined, last login etc
+      * - <course name>__course_structure-prod-analytics.json 
+        - JSON
+        - Course structure in JSON
+      * - <course name>_wiki_article.csv 
+        - csv
+        - contains the wiki article information
+      * - <course name>__enrollment.csv  
+        - csv
+        - Contains information about enrollment 
+      * - <course name>__wiki_articlerevision.csv 
+        - csv
+        - Contains information about wiki article revisions done by the students
+      * - <course name>__forum.mongo
+        - csv
+        - contains forum posts etc made by the users
 
-    .. Note:: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
+
+.. Note:: 
+
+Given the table of the data and types we now go through the steps you have to take to transform the log files. 
 
    #. Unzip tracking log file.
     
@@ -125,7 +128,7 @@ and contains the detailed clickstream events. These are the events which are rec
 
         From within the tracking log file folder, run command:
         
-        'gzip -d COURSE_PREFIX__tracking_log.json.gz'
+        ``gzip -d COURSE_PREFIX__tracking_log.json.gz``
  
         This will extract the tracking log file into .json format, ready to be piped.
 
@@ -140,24 +143,24 @@ and contains the detailed clickstream events. These are the events which are rec
         Let us suppose that we want to pipe the course named <course_name>,
         We assume raw data is stored in the folder :
    
-            ''/.../<course_name>/log_data/''
+            ``/.../<course_name>/log_data/``
      
         Create a folder called intermeidary_csv under the folder named <course_name>
    
-            ''/.../<course_name>/intermediary_csv/''
+            ``/.../<course_name>/intermediary_csv/``
      
         Create another folder called moocdb_csv under the folder named <course_name>
    
-            ''/.../<course_name>/moocdb_csv/''
+            ``/.../<course_name>/moocdb_csv/``
 
    #. Launch the piping
 
         From within the import.openedx.json_to_relation folder, run command:
 
-        ''bash scripts/transformGivenLogfiles.sh 
-        /.../<course_name>/intermediary_csv/'' 
+        ``bash scripts/transformGivenLogfiles.sh 
+        /.../<course_name>/intermediary_csv/``
         
-        ''/../<course_name>/log_data/COURSE_PREFIX__tracking_log.json''
+        ``/../<course_name>/log_data/COURSE_PREFIX__tracking_log.json``
 
         As show in the command above, transfromGivenLogFiles.sh takes two arguments. First argument is the path to the destination folder, 
         and second argument is the tracking log json file to pipe. **/.../** represents the path to the directory where the <course_name> folder is located on your machine. 
@@ -166,7 +169,7 @@ and contains the detailed clickstream events. These are the events which are rec
         an example of the output csv files produced for link5_10x course:
         
         
-                        ''link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql
+                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_ABExperimentTable.csv
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AccountTable.csv
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_AnswerTable.csv
@@ -175,7 +178,7 @@ and contains the detailed clickstream events. These are the events which are rec
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_EventIpTable.csv
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_InputStateTable.csv
                         link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_LoadInfoTable.csv
-                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv''
+                        link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql_StateTable.csv``
         
 
    #. Run relation to MOOCdb (a.k.a qpipe)
