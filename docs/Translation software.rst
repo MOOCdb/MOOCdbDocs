@@ -47,7 +47,7 @@ Step 1: Installing the required packages or downloading a VM
  
   * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
   
-                **pip install pandas --upgrade**
+                        **pip install pandas --upgrade**
 
   * You may have to upgrade **numpy** and **numexpr** before upgrading **pandas** if upgrading **pandas** gives you an error. 
     The command to upgrade numpy and numexpr is the same 
@@ -56,7 +56,8 @@ Step 1: Installing the required packages or downloading a VM
                         
                         **pip install numexpr --upgrade** 
                         
-        #. Download the code from MOOCdb github:
+
+       #. Download the code from MOOCdb github:
         
          `Openedx diagnosis`_
          
