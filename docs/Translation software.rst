@@ -76,13 +76,13 @@ If your course is through edX you would get the files shown below. The most impo
 processing the tracking log files. Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
 and contains the detailed clickstream events. These are the events which are recorded along with event type. 
 
-   .. list-table::
-     :widths: 20 10 20
-     :header-rows: 1
+.. list-table::
+   :widths: 40 10 70
+   :header-rows: 1
 
    * - File
      - Type
-     - Content
+     - content
    * - <course name>__profiles.csv 
      - csv
      - contains PII information about the learner
@@ -116,17 +116,16 @@ and contains the detailed clickstream events. These are the events which are rec
    * - <course name>__forum.mongo
      - csv
      - contains forum posts etc made by the users
-     
+
     .. Note:: Given the table of the data and types we now go through the steps you have to take to transform the log files. 
 
    #. Unzip tracking log file.
     
-       All raw data files in **data/raw/<course_name>** have the same prefix in the format of **<course_name>__<creation date>**, we will 
-        call the prefix **COURSE_PREFIX**
+       All raw data files in **data/raw/<course_name>** have the same prefix in the format of **<course_name>__<creation date>**, we will call the prefix **COURSE_PREFIX**
 
         From within the tracking log file folder, run command:
         
-        ''gzip -d COURSE_PREFIX__tracking_log.json.gz''
+        'gzip -d COURSE_PREFIX__tracking_log.json.gz'
  
         This will extract the tracking log file into .json format, ready to be piped.
 
