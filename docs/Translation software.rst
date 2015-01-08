@@ -124,8 +124,8 @@ Note: Given the table of the data and types we now go through the steps you have
         call the prefix **COURSE_PREFIX**
 
         From within the tracking log file folder, run command:
- :
-          **gzip -d COURSE_PREFIX__tracking_log.json.gz**
+        
+          : **gzip -d COURSE_PREFIX__tracking_log.json.gz**
  
         This will extract the tracking log file into .json format, ready to be piped.
 
