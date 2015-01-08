@@ -45,7 +45,7 @@ Step 1: Installing the required packages or downloading a VM
         
  .. Note::   
  
-* Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
+  * Make sure your Pandas version is higher than **0.14.0**. If it is below that you would have to update Pandas by running 
       **pip install pandas --upgrade**
 
                 * You may have to upgrade **numpy** and **numexpr** before upgrading **pandas** if upgrading **pandas** gives you an error. 
