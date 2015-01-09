@@ -185,39 +185,35 @@ and contains the detailed clickstream events. These are the events which are rec
 
    5. Run relation to MOOCdb (a.k.a qpipe):
    
-        This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
-        We will call the source CSV as '**intermediary CSV**' and the output CSV as '**MOOCdb CSV**'.
+      This tutorial covers the transfer of CSV files as output by Andreas Paepcke’s json_to_relation to MOOCdb CSV files.
+      We will call the source CSV as '**intermediary CSV**' and the output CSV as '**MOOCdb CSV**'.
 
-        Let us suppose that we want to pipe to MOOCdb the course named **'<course_name>'**.
-        We assume that the course’s log file has been processed by json_to_relation, 
-        and that the output files are stored in the folder :
+      Let us suppose that we want to pipe to MOOCdb the course named **'<course_name>'**.
+      We assume that the course’s log file has been processed by json_to_relation, 
+      and that the output files are stored in the folder :
 
-              **/.../<course_name>/intermediary_csv/**
+            **/.../<course_name>/intermediary_csv/**
 
-        We want the MOOCdb CSV to be written to folder 
+      We want the MOOCdb CSV to be written to folder 
 
-              **/.../<course_name>/moocdb_csv/**
+            **/.../<course_name>/moocdb_csv/**
 
-            a. Edit **import.openedx.qpipe/config.py**
+        a. Edit **import.openedx.qpipe/config.py**
             
-                **The variables not mentionned in the tutorial must simply be left untouched.**
+              **The variables not mentionned in the tutorial must simply be left untouched.**
       
-            b. **QUOTECHAR**: The quote character used in the intermediary CSV files. Most commonly a single quote : ‘
+          b. **QUOTECHAR**: The quote character used in the intermediary CSV files. Most commonly a single quote (‘)
    
-            c. **TIMESTAMP_FORMAT**: describes the timestamp pattern used in '***_EdxTrackEventTable.csv**' intermediary CSV file. See python doc to understand syntax.
+          c. **TIMESTAMP_FORMAT**: describes the timestamp pattern used in '***_EdxTrackEventTable.csv**' intermediary CSV file. See python doc to understand syntax.
    
-            d. **COURSE_NAME**: The name of the folder containing the intermediary CSV files. Here it is **'<course_name>'**.
+          d. **COURSE_NAME**: The name of the folder containing the intermediary CSV files. Here it is **'<course_name>'**.
    
-            e. **CSV_PREFIX**: All the intermediary CSV file names in 
-   
-                        **/.../<course_name>/intermediary_csv/**
-         
-                share a common prefix that was generated when running JSON to relation. This prefix is also the name of the only .sql file in the folder. For example, in the above case this prefix would be :
+          e. **CSV_PREFIX**: All the intermediary CSV file names in **/.../<course_name>/intermediary_csv/** folder share a common prefix that was generated when running JSON to relation. This prefix is also the name of the only '.sql' file in the folder. For example, in the above case this prefix would be :
                 
-                        ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
+                      ``link5_10x_trace_merged.2014-11-02T23_46_45.622627_28028.sql``
       
-            f. **DOMAIN**: the domain name of the course platform URL, most commonly they are https://www.edx.org or https://courses.edx.org. 
-               (No slash at the end of the domain name). To be sure, you can look at the URL's appearing '***_EdxTrackEventTable.csv**' intermediary CSV file.
+          f. **DOMAIN**: the domain name of the course platform URL, most commonly they are https://www.edx.org or https://courses.edx.org. 
+             (No slash at the end of the domain name). To be sure, you can look at the URL's appearing in '***_EdxTrackEventTable.csv**' intermediary CSV file.
 
    #. Launch the piping:
    
