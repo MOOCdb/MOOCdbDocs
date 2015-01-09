@@ -213,7 +213,7 @@ and contains the detailed clickstream events. These are the events which are rec
         f. **DOMAIN**: the domain name of the course platform URL, most commonly they are https://www.edx.org or https://courses.edx.org. 
              (No slash at the end of the domain name). To be sure, you can look at the URL's appearing in '***_EdxTrackEventTable.csv**' intermediary CSV file.
 
-.. note:: The variables not mentioned in the tutorial must simply be left untouched.
+   .. note:: The variables not mentioned in the tutorial must simply be left untouched.
 
    6. Launch the piping:
    
