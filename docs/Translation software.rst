@@ -200,8 +200,8 @@ and contains the detailed clickstream events. These are the events which are rec
 
         a. Edit **import.openedx.qpipe/config.py**
             
- .. note:: The variables not mentioned in the tutorial must simply be left untouched.
-      
+    .. note:: The variables not mentioned in the tutorial must simply be left untouched.
+ 
         b. **QUOTECHAR**: The quote character used in the intermediary CSV files. Most commonly a single quote (‘)
    
         c. **TIMESTAMP_FORMAT**: describes the timestamp pattern used in '***_EdxTrackEventTable.csv**' intermediary CSV file. See python doc to understand syntax.
