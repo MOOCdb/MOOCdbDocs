@@ -200,8 +200,6 @@ and contains the detailed clickstream events. These are the events which are rec
 
         a. Edit **import.openedx.qpipe/config.py**
             
-    .. note:: The variables not mentioned in the tutorial must simply be left untouched.
- 
         b. **QUOTECHAR**: The quote character used in the intermediary CSV files. Most commonly a single quote (‘)
    
         c. **TIMESTAMP_FORMAT**: describes the timestamp pattern used in '***_EdxTrackEventTable.csv**' intermediary CSV file. See python doc to understand syntax.
@@ -215,19 +213,21 @@ and contains the detailed clickstream events. These are the events which are rec
         f. **DOMAIN**: the domain name of the course platform URL, most commonly they are https://www.edx.org or https://courses.edx.org. 
              (No slash at the end of the domain name). To be sure, you can look at the URL's appearing in '***_EdxTrackEventTable.csv**' intermediary CSV file.
 
-   #. Launch the piping:
+.. note:: The variables not mentioned in the tutorial must simply be left untouched.
+
+   6. Launch the piping:
    
         When the variables mentioned above have been correctly edited in ``config.py``, the script is ready to launch. 
         From within the ``import.openedx.qpipe`` folder, run the command:
    
             ``time python main.py``
 
-   #. Delete log file:
+   7. Delete log file:
    
         When the piping is done, if everything went well, go to the output directory '**/.../<course_name>/moocdb_csv/**' and 
         delete the '**log.org**' file that takes a lot of space.
 
-   #. Load course into MySQL:
+   8. Load course into MySQL:
    
         Copy the file '**/.../<course_name>/moocdb_csv/6002x_2013_spring/moocdb.sql**' to '**/.../<course_name>/moocdb_csv/**' folder.
         Change directory to '**/.../<course_name>/moocdb_csv/**'. Replace '6002x_spring_2013' by '<course_name>' in ``moocdb.sql`` file.
