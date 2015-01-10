@@ -1,9 +1,11 @@
+
 .. toctree::
    :maxdepth: 2
-
-=====
+   
+#####
 Coursera
-=====
+#####
+
 
 I can achieve this hierarchy if I create a page for Translation Software and put edx and coursera on the same as different headings. I DO NOT want that. Is there any way we can achieve the hierarchy as above with each one getting individual pages. 
 
