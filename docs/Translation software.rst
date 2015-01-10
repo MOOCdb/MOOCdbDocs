@@ -256,3 +256,8 @@ Some examples contextualized presented via the two urls below show for an actual
         .. _Problem Check Example: http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
         
 More details can be found in Quentin Agrens thesis here
+
+.. toctree::
+   :maxdepth: 2
+
+Lets check about Coursera
