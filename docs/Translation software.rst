@@ -14,8 +14,10 @@ Currently translation software is available for the following three platforms - 
 .. toctree::
    :maxdepth: 2
    
-   edx
-   Coursera ../coursera.rst
+ *  :ref: `in-edx`
+ *  :ref: `../coursera.rst`
+
+.. _in-edx:
 
 ===
 edx
