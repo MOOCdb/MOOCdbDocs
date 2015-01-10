@@ -260,4 +260,6 @@ More details can be found in Quentin Agrens thesis here
 .. toctree::
    :maxdepth: 2
 
-Lets check about Coursera
+===
+Coursera
+===
