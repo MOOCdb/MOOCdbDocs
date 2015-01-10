@@ -258,8 +258,8 @@ More details can be found in Quentin Agrens thesis here
 
 
 .. toctree::
-
+   :maxdepth: 2
  
-#############
+========
 Coursera
-#############
+========
