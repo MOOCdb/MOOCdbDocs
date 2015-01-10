@@ -257,8 +257,6 @@ Some examples contextualized presented via the two urls below show for an actual
         
 More details can be found in Quentin Agrens thesis here
 
-.. toctree::
-   :maxdepth: 2
 
 ========
 Coursera
