@@ -12,12 +12,11 @@ The purpose of this user guide is to make the users understand of the following 
 Currently translation software is available for the following three platforms - **edX, OpenedX and**. 
 
 * :ref:`in-ext`
-===============
 
 * OpenedX
 
 * :doc:`Coursera`
-================
+
   
 .. _in-ext:
 
