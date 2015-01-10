@@ -9,7 +9,7 @@ The purpose of this user guide is to make the users understand of the following 
 * How to run the software and
 * Different assumptions and heuristics used during the translation
 
-Currently translation software is available for the following three platforms - **edX, OpenedX and**. 
+Currently translation software is available for the following three platforms: 
 
 * :ref:`in-ext`
 
