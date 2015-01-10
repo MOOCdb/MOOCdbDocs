@@ -1,5 +1,3 @@
-.. toctree::
-   :maxdepth: 2
 
 #############
 Translation software documentation 
@@ -12,6 +10,9 @@ The purpose of this user guide is to make the users understand of the following 
 * Different assumptions and heuristics used during the translation
 
 Currently translation software is available for the following three platforms - **edX, OpenedX and Coursera**. 
+
+.. toctree::
+   :maxdepth: 2
 
 ===
 edx
@@ -255,11 +256,3 @@ Some examples contextualized presented via the two urls below show for an actual
         .. _Problem Check Example: http://alfa6.csail.mit.edu/moocdbdocs/problem-check-example.html
         
 More details can be found in Quentin Agrens thesis here
-
-
-.. toctree::
-   :maxdepth: 2
- 
-========
-Coursera
-========
