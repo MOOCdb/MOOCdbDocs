@@ -15,8 +15,7 @@ Currently translation software is available for the following three platforms - 
 
 * OpenedX
 
-* Coursera :doc:`Coursera`
-=======
+* :doc:`Coursera`
 
   
 .. _in-ext:
