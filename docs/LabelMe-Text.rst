@@ -94,7 +94,10 @@ If you are using a virtual machine and wish the process to keep running after yo
 
 #. Start the screen program
 
-   ``screen``
+   .. code-block:: phyton
+      
+      screen
+
 
 #. Navigate to the Label-Me Text folder and start the server again
 
@@ -104,9 +107,13 @@ If you are using a virtual machine and wish the process to keep running after yo
 
 #. While the server is running, detach from the current screen using the following command
 
-   ``Ctrl + a, d``
+   .. code-block:: phyton
+      
+      Ctrl + a, d
 
 #. The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command:
 
-   ``screen -r``
+   .. code-block:: phyton
+      
+      screen -r
 
