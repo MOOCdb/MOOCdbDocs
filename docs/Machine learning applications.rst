@@ -1,10 +1,10 @@
 
 Machine learning apps
-===========
+=====================
 
 
-Predict dropout
----------------
+**Predict dropout**
+
 
 
 Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
@@ -14,12 +14,12 @@ MOOCdb. This detailed information gives researchers and plaform providers inform
 syntactically and semantically. 
 
 
-Topic Models 
--------------
+**Topic Models**
 
 
-Problem analytics
---------------------
+
+**Problem analytics**
+
 
 
 .. toctree::
