@@ -3,11 +3,18 @@
 Feature Factory Instructions 
 ============================
 
-https://github.com/MOOCdb/MOOCdb/tree/master/feature_factory
+The following two github links will be useful reference:
 
-https://github.com/MOOCdb/MOOCdb/tree/master/feature_discovery
+* `Feature Factory`_
+
+* `Feature Discovery`_
+
+.. _Feature Factory: https://github.com/MOOCdb/MOOCdb/tree/master/feature_factory
+
+.. _Feature Discovery: https://github.com/MOOCdb/MOOCdb/tree/master/feature_discovery
 
 Fresh setup:
+-------------
 
 The ultimate guide for a fresh setup can be found `here`_.
 
