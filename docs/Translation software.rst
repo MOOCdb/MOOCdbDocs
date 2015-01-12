@@ -11,16 +11,16 @@ The purpose of this user guide is to make the users understand of the following 
 
 Currently translation software is available for the following three platforms: 
 
-* :ref:`in-ext`
+* :ref:`in-edX`
 
 * OpenedX
 
 * :doc:`Coursera`
 
   
-.. _in-ext:
+.. _in-edX:
 
-ext
+edX
 ~~~
 
 The following step by step instructions will guide you to process the tracking log files and get into MOOCdb format, we provide the following detailed instructions. First step is to install a machine with 
