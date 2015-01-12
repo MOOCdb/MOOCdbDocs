@@ -8,7 +8,10 @@ https://github.com/MOOCdb/MOOCdb/tree/master/feature_factory
 https://github.com/MOOCdb/MOOCdb/tree/master/feature_discovery
 
 Fresh setup:
-#ultimate guide http://thecodeship.com/deployment/deploy-django-apache-virtualenv-and-mod_wsgi/
+
+The ultimate guide for a fresh setup can be found `here`_.
+
+.. _here: http://thecodeship.com/deployment/deploy-django-apache-virtualenv-and-mod_wsgi/
 
 
 .. code-block:: phyton
@@ -37,19 +40,22 @@ Fresh setup:
    import sys
 
 path = '/home/ubuntu/alfa'
-if path not in sys.path:
+
+If path not in sys.path then use the following command:
+
+.. code-block:: phyton
+
     sys.path.append(path)
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'alfa.settings'
-
-import django.core.handlers.wsgi
-application = django.core.handlers.wsgi.WSGIHandler()
-
-
-copy files to ~/alfa
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'alfa.settings'
+    import django.core.handlers.wsgi
+    application = django.core.handlers.wsgi.WSGIHandler()
+    copy files to ~/alfa
 
 
-to send email:
-sudo apt-get install postfix
+To send email:
 
-sudo service apache2 restart
+.. code-block:: phyton
+
+   sudo apt-get install postfix
+
+   sudo service apache2 restart
