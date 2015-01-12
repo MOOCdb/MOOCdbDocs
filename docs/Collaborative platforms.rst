@@ -1,4 +1,5 @@
-############
+
+
 Collaborative platforms
 ############
 
@@ -18,8 +19,8 @@ platform for internal use. The instructions will enable to download the software
     Curate Me
 
 
-MOOCviz
-=======
+**MOOCviz**
+
 
 
 A MOOCviz platform offers:
@@ -46,8 +47,8 @@ Testing
 -------------------
 
 
-Feature Factory
-===============
+**Feature Factory**
+
 
 We are developing a second web-based collaborative platform called Feature Factory. 
 Our current version of this platform can be seen at .._Feature Factory : http://featurefactory.csail.mit.edu
@@ -72,8 +73,8 @@ Installation steps
 Testing 
 -------------------
 
-LabelMe- Text 
-=============
+**LabelMe-Text**
+
 
 We developed an online platform where users would post their tagging projects and a crowd of helpers can p
 articipate in MOOC data science by selecting a project and tagging the content based on some instructions. 
@@ -105,7 +106,7 @@ Testing
 -------------------
 
 
-Curate Me  
-==========
+**Curate Me**
+
 
 Coming soon
