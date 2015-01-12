@@ -1,7 +1,9 @@
 
-============================
+Feature Factory
+==============
+
 Feature Factory Instructions 
-============================
+----------------------------
 
 The following two github links will be useful reference:
 
