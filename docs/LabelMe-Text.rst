@@ -73,7 +73,7 @@ Making an Admin
    exit
 
 Leaving server running
--If you are using a virtual machine and wish the process to keep running after you close the ssh connection, we will use a program called screen to achieve this.
+-If you are using a virtual machine and wish the process to keep running after you close the ssh connection, we will use a program called **screen** to achieve this.
 
 -First we need to install screen.
 
@@ -82,15 +82,18 @@ Leaving server running
    sudo apt-get install screen
 
 -Start the screen program
-screen
+``screen``
 
 -Navigate to the Label-Me Text folder and start the server again
-bundle exec rails s
+
+.. code-block:: phyton
+
+   bundle exec rails s
 
 -While the server is running, detach from the current screen using the following command
 
-**Ctrl + a, d**
+``Ctrl + a, d``
 
 -The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command
-screen -r
+``screen -r``
 
