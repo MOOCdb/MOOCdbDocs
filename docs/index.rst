@@ -15,7 +15,7 @@ Contents:
 
    Translation software 
    Collaborative platforms
-   Analytic engines
+   Analytic
    Machine learning applications 
 
 Contact
