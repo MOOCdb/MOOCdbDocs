@@ -13,10 +13,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   Translation software 
+   Translation software
    Collaborative platforms
    Analytic
-   Machine learning applications 
+   Machine learning applications
 
 Contact
 ============
