@@ -33,18 +33,14 @@ A MOOCviz platform offers:
 
 -	A means of commenting on any existing visualization by posting in the comments section underneath it. Discussions are free form. They likely will extend beyond the interpretation or thoughts provoked by the visualization to the ways that the data have been transformed in extraction and aggregate steps. We expect that discussions will stimulate ideas for new visualizations.
 
-System Requirements 
--------------------
+
+**System Requirements**
 
 
+**Installation steps**
 
 
-Installation steps 
--------------------
-
-
-Testing 
--------------------
+**Testing**
 
 
 **Feature Factory**
@@ -60,18 +56,13 @@ Feature Factory offers two modes of engagement:
 - In the second mode, “helping”, the MOOC crowd proposes, explanations or variables, and suggests means to operationalize them. They provide comments on proposal or vote them up or down in popularity. The software savvy among them write and share software scripts written to operationalize the most popular or compelling proposals. 
 
 
-System Requirements 
--------------------
+**System Requirements**
 
 
+**Installation steps**
 
 
-Installation steps 
--------------------
-
-
-Testing 
--------------------
+**Testing**
 
 **LabelMe-Text**
 
@@ -92,19 +83,16 @@ Label Me’s current incarnation is shown in Figure 3.  It works in the followin
 -	Taggers (Label Me’s crowd) are given credit for every tag they have provided and the number of their tags that pass the filters to be used in model learning. 
 
 
-System Requirements 
--------------------
+**System Requirements**
 
 
 
 
-Installation steps 
--------------------
+**Installation steps**
 
 
-Testing 
--------------------
 
+**Testing**
 
 **Curate Me**
 
