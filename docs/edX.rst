@@ -1,4 +1,5 @@
 
+
 edX
 ===
 
@@ -60,6 +61,7 @@ Step 1: Installing the required packages or downloading a VM
                        **pip install numpy --upgrade** 
 
                        **pip install numexpr --upgrade**
+
 **************************************
 Step 2: Processing the tracking logs  
 **************************************
