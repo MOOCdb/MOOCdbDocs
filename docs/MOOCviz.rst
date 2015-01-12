@@ -1,6 +1,6 @@
 
 MOOCviz
-=======
+########
 
 
 
@@ -34,7 +34,7 @@ Capistrano (https://github.com/capistrano/capistrano) is a remote server automat
 
 
 Tutorial for MOOCviz:
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Clone from GitHub
 
