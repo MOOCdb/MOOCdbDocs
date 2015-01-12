@@ -17,20 +17,24 @@ Consult Kalyan for access to the last two.
 
 If you have questions about anything and can't find the answer here on this wiki, feel free to email me at pwrtsoccer@gmail.com and I will do my best to help you.
 
--Setup
+Setup
+----
 
-Follow the tutorial ( see below) to set up for developing and upgrading MOOCviz.
+Follow the tutorial to set up for developing and upgrading MOOCviz.
 
--Server
+Server
+~~~~~~
 
 I tried my best to setup the server according to this guide (http://robmclarty.com/blog/how-to-setup-a-production-server-for-rails-4), however it is not all the same. The server uses Apache 2 to deploy the Rails 4 MOOCviz web application.
 
--Capistrano
+Capistrano
+~~~~~~
 
 Capistrano (https://github.com/capistrano/capistrano) is a remote server automation tool. At one point I tried integrating Capistrano into MOOCviz using this guide (http://robmclarty.com/blog/how-to-deploy-a-rails-4-app-with-git-and-capistrano), but there were more important things to be done and I had at least a somewhat consistent method for upgrading the server with new features. However, it would be much better to have Capistrano integrated as it offers lots of cool features and is less error prone than updating the server yourself. I pushed the work I had done to another branch on GitHub here.
 
 
-—Tutorial for MOOCviz 
+Tutorial for MOOCviz:
+~~~~~~
 
 Clone from GitHub
 
