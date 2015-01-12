@@ -1,10 +1,10 @@
 
 ###############
-Install Process
+LabelMe-Text
 ###############
 
 **************************************
-Installing Ruby on Rails
+Install Process - Installing Ruby on Rails
 **************************************
 
 First, install ruby on your linux environment.  The commands used here come from https://gorails.com/setup/ubuntu/14.10
