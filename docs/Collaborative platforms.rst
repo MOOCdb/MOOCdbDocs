@@ -3,7 +3,7 @@ Collaborative platforms
 ############
 
 This documentation is for folks to install different open source platforms that MOOCdb project has. They include 
-Collaborative visualization platform - MOOCviz, platform to crowd source feature and variable formation - Feature Factory,
+Collaborative visualization platform - MOOCviz, platform to crowd source feature and variable formation - :doc:`Feature Factory`,
 platform for getting labels from the crowd - :doc:`LabelMe-Text`. These instructions allow folks to create their own instantiation of the 
 platform for internal use. The instructions will enable to download the software and deploy a server for each one of these platforms. 
 
