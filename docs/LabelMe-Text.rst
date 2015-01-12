@@ -57,13 +57,14 @@ Server Setup
    bundle exec rake db:reset
    bundle exec rails s
 
--This starts a copy of the server running on the machine’s localhost.  You can access it in your browser at localhost:3000/.
+-This starts a copy of the server running on the machine’s localhost.  You can access it in your browser at ``localhost:3000/``.
 
 Making an Admin
--Now you want to make an admin user.  Go to the website and sign up with the account info for your admin user.
--From the home page, click on “Create profile”
--Fill in the account details, check the box agreeing not to scrape the data from the website, and click “Create my account”
--Then go to terminal and type Ctrl+C to stop the server from running. Run the following commands:
+
+* -Now you want to make an admin user. Go to the website and sign up with the account info for your admin user.
+* -From the home page, click on “Create profile”
+* -Fill in the account details, check the box agreeing not to scrape the data from the website, and click “Create my account”
+* -Then go to terminal and type ``Ctrl+C`` to stop the server from running. Run the following commands:
 
 .. code-block:: phyton
 
@@ -73,7 +74,8 @@ Making an Admin
    exit
 
 Leaving server running
--If you are using a virtual machine and wish the process to keep running after you close the ssh connection, we will use a program called **screen** to achieve this.
+
+-If you are using a virtual machine and wish the process to keep running after you close the 'ssh' connection, we will use a program called **screen** to achieve this.
 
 -First we need to install screen.
 
@@ -82,6 +84,7 @@ Leaving server running
    sudo apt-get install screen
 
 -Start the screen program
+
 ``screen``
 
 -Navigate to the Label-Me Text folder and start the server again
@@ -94,6 +97,7 @@ Leaving server running
 
 ``Ctrl + a, d``
 
--The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command
+-The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command:
+
 ``screen -r``
 
