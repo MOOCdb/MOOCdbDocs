@@ -11,7 +11,7 @@ Fresh setup:
 #ultimate guide http://thecodeship.com/deployment/deploy-django-apache-virtualenv-and-mod_wsgi/
 
 
-.. code:block:: python
+.. code-block:: phyton
 
    sudo apt-get update --fix-missing
    sudo apt-get install python-pip python-dev build-essential
@@ -22,14 +22,14 @@ Fresh setup:
    sudo pip install django celery django-celery django-kombu hoover django_extensions
    sudo apt-get install python-mysqldb 
  
-.. code:block:: python
+.. code-block:: phyton
 
    sudo nano /etc/apache2/apache2.conf #add this
    ServerAdmin kiarashplusplus@gmail.com
    ServerName featurefactory.csail.mit.edu
    WSGIScriptAlias / var/www/featurefactory.csail.mit.edu/index.wsgi
 
-.. code:block:: python
+.. code-block:: phyton
 
    sudo mkdir /var/www/featurefactory.csail.mit.edu
    sudo nano /var/www/featurefactory.csail.mit.edu/index.wsgi
