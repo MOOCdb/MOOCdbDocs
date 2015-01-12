@@ -7,7 +7,7 @@ required packages and disk space.
 
 
 Step 1: Installing the required packages or downloading a VM 
-**************************************
+-------------------------------------------------------------
 
 * Option 1: To run the software you may want to download a VM from Amazon cloud. 
  
@@ -61,9 +61,9 @@ Step 1: Installing the required packages or downloading a VM
 
                        **pip install numexpr --upgrade**
 
-**************************************
+
 Step 2: Processing the tracking logs  
-**************************************
+------------------------------------
 
 If your course is through edX you would get the files shown below. The most important and perhaps most tedious is
 processing the tracking log files. Some of the files listed below in the table could be representative of what MIT delivers to us. But tracking_log.json is the largest file
