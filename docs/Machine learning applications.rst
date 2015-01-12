@@ -22,3 +22,13 @@ Topic Models
 
 Problem analytics 
 =================
+
+
+
+.. toctree::
+    :maxdepth: 2
+    :titlesonly:
+
+    Dropout prediction
+    Topic Models
+    Community detection
