@@ -3,7 +3,7 @@
 Translation software documentation 
 #############
 
-The purpose of this user guide is to make the users understand of the following operations:
+The purpose of this user guide is to make the users understand the following operations:
 
 * How the translation is done from the raw data files provided by Coursera and edX.
 * How to run the software and
