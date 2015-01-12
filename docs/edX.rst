@@ -1,12 +1,11 @@
 
-
 edX
 ===
 
 The following step by step instructions will guide you to process the tracking log files and get into MOOCdb format, we provide the following detailed instructions. First step is to install a machine with 
 required packages and disk space. 
 
-**************************************
+
 Step 1: Installing the required packages or downloading a VM 
 **************************************
 
