@@ -88,25 +88,25 @@ If you are using a virtual machine and wish the process to keep running after yo
 
 #. First we need to install screen.
 
-.. code-block:: phyton
+   .. code-block:: phyton
 
-   sudo apt-get install screen
+      sudo apt-get install screen
 
 #. Start the screen program
 
-``screen``
+   ``screen``
 
 #. Navigate to the Label-Me Text folder and start the server again
 
-.. code-block:: phyton
+   .. code-block:: phyton
 
-   bundle exec rails s
+      bundle exec rails s
 
 #. While the server is running, detach from the current screen using the following command
 
-``Ctrl + a, d``
+   ``Ctrl + a, d``
 
 #. The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command:
 
-``screen -r``
+   ``screen -r``
 
