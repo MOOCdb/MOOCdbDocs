@@ -62,7 +62,7 @@ Time to set up the server. Move to the LabelMe-Text folder and run the following
    bundle exec rake db:reset
    bundle exec rails s
 
-This starts a copy of the server running on the machine’s localhost.  You can access it in your browser at:
+This starts a copy of the server running on the machine’s localhost. You can access it in your browser at:
 
 ``localhost:3000/``.
 
@@ -86,27 +86,27 @@ Leaving server running
 
 If you are using a virtual machine and wish the process to keep running after you close the 'ssh' connection, we will use a program called **screen** to achieve this.
 
-First we need to install screen.
+#. First we need to install screen.
 
 .. code-block:: phyton
 
    sudo apt-get install screen
 
-Start the screen program
+#. Start the screen program
 
 ``screen``
 
-Navigate to the Label-Me Text folder and start the server again
+#. Navigate to the Label-Me Text folder and start the server again
 
 .. code-block:: phyton
 
    bundle exec rails s
 
-While the server is running, detach from the current screen using the following command
+#. While the server is running, detach from the current screen using the following command
 
 ``Ctrl + a, d``
 
-The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command:
+#. The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command:
 
 ``screen -r``
 
