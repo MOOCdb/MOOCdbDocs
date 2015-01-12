@@ -32,6 +32,7 @@ For this project I ran Ruby using RVM, so then run
    echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 Install node.js
+
 .. code-block:: phyton
 
    sudo add-apt-repository ppa:chris-lea/node.js
@@ -61,7 +62,7 @@ Time to set up the server. Move to the LabelMe-Text folder and run the following
    bundle exec rake db:reset
    bundle exec rails s
 
-This starts a copy of the server running on the machine’s localhost.  You can access it in your browser at
+This starts a copy of the server running on the machine’s localhost.  You can access it in your browser at:
 
 ``localhost:3000/``.
 
