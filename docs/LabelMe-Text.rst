@@ -8,7 +8,8 @@ Install Process - Installing Ruby on Rails
 **************************************
 
 First step is to install ruby on your linux environment. The commands used here come from https://gorails.com/setup/ubuntu/14.10
--In terminal, run these two commands:
+
+In terminal, run these two commands:
 
 .. code-block:: phyton
 
@@ -17,7 +18,7 @@ First step is to install ruby on your linux environment. The commands used here 
      
 
 
--For this project I ran Ruby using RVM, so then run
+For this project I ran Ruby using RVM, so then run
 
 .. code-block:: phyton
 
@@ -30,25 +31,28 @@ First step is to install ruby on your linux environment. The commands used here 
    ruby -v
    echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
+Install node.js
 .. code-block:: phyton
 
-   -Install node.js
    sudo add-apt-repository ppa:chris-lea/node.js
    sudo apt-get update
    sudo apt-get install nodejs
 
+Install Rails
+   
 .. code-block:: phyton
 
-   -Install Rails
    gem install rails
 
+Install depedencies for pg gem **not in online instructions to install rails
+
 .. code-block:: phyton
 
-   -Install depedencies for pg gem **not in online instructions to install rails
    sudo apt-get install ruby-dev libpq-dev
 
 Server Setup
--Time to set up the server.  Move to the LabelMe-Text folder and run
+
+Time to set up the server.  Move to the LabelMe-Text folder and run
 
 .. code-block:: phyton
 
@@ -57,9 +61,12 @@ Server Setup
    bundle exec rake db:reset
    bundle exec rails s
 
--This starts a copy of the server running on the machine’s localhost.  You can access it in your browser at ``localhost:3000/``.
+This starts a copy of the server running on the machine’s localhost.  You can access it in your browser at
+
+``localhost:3000/``.
 
 Making an Admin
+--------------
 
 * -Now you want to make an admin user. Go to the website and sign up with the account info for your admin user.
 * -From the home page, click on “Create profile”
@@ -74,30 +81,31 @@ Making an Admin
    exit
 
 Leaving server running
+----------------------
 
--If you are using a virtual machine and wish the process to keep running after you close the 'ssh' connection, we will use a program called **screen** to achieve this.
+If you are using a virtual machine and wish the process to keep running after you close the 'ssh' connection, we will use a program called **screen** to achieve this.
 
--First we need to install screen.
+First we need to install screen.
 
 .. code-block:: phyton
 
    sudo apt-get install screen
 
--Start the screen program
+Start the screen program
 
 ``screen``
 
--Navigate to the Label-Me Text folder and start the server again
+Navigate to the Label-Me Text folder and start the server again
 
 .. code-block:: phyton
 
    bundle exec rails s
 
--While the server is running, detach from the current screen using the following command
+While the server is running, detach from the current screen using the following command
 
 ``Ctrl + a, d``
 
--The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command:
+The server should now run even if you stop the ssh session.  To return to the running server terminal, use the command:
 
 ``screen -r``
 
