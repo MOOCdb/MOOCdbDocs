@@ -12,8 +12,10 @@ First step is to install ruby on your linux environment. The commands used here 
 
   .. code-block:: phyton
 
-  sudo apt-get update
-  sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
+   sudo apt-get update
+   sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
+     
+
 
 -For this project I ran Ruby using RVM, so then run
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
