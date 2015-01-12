@@ -52,7 +52,7 @@ Install depedencies for pg gem **not in online instructions to install rails
 
 Server Setup
 
-Time to set up the server.  Move to the LabelMe-Text folder and run
+Time to set up the server. Move to the LabelMe-Text folder and run the following command:
 
 .. code-block:: phyton
 
@@ -68,10 +68,10 @@ This starts a copy of the server running on the machine’s localhost.  You can 
 Making an Admin
 --------------
 
-* -Now you want to make an admin user. Go to the website and sign up with the account info for your admin user.
-* -From the home page, click on “Create profile”
-* -Fill in the account details, check the box agreeing not to scrape the data from the website, and click “Create my account”
-* -Then go to terminal and type ``Ctrl+C`` to stop the server from running. Run the following commands:
+* Now you want to make an admin user. Go to the website and sign up with the account info for your admin user.
+* From the home page, click on “Create profile”
+* Fill in the account details, check the box agreeing not to scrape the data from the website, and click “Create my account”
+* Then go to terminal and type ``Ctrl+C`` to stop the server from running. Run the following commands:
 
 .. code-block:: phyton
 
