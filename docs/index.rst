@@ -18,6 +18,6 @@ Contents:
    Analytic
    Machine learning applications
 
-Contact
-============
+**Contact**
+
 Founded at CSAIL, MIT. Please contact kalyan@csail.mit.edu for more information. 
