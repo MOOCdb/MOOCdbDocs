@@ -85,12 +85,7 @@ Label Me’s current incarnation is shown in Figure 3.  It works in the followin
 
 **System Requirements**
 
-
-
-
 **Installation steps**
-
-
 
 **Testing**
 
