@@ -10,10 +10,10 @@ Install Process - Installing Ruby on Rails
 First step is to install ruby on your linux environment. The commands used here come from https://gorails.com/setup/ubuntu/14.10
 -In terminal, run these two commands:
 
- .. code-block::
+  .. code-block:: phyton
 
- sudo apt-get update
- sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
+  sudo apt-get update
+  sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
 
 -For this project I ran Ruby using RVM, so then run
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
