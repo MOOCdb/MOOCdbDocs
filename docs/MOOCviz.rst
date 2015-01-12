@@ -7,11 +7,12 @@ MOOCviz
 
 For info on MOOCviz, including purpose, features, and architecture, read the following papers:
 
-MoocViz: A Large Scale, Open Access, Collaborative, Data Analytics Platform for MOOCs
+**MoocViz:** A Large Scale, Open Access, Collaborative, Data Analytics Platform for MOOCs
 
-MOOCdb: An collaborative environment for MOOC data
+**MOOCdb:** An collaborative environment for MOOC data
 
-MOOCviz 2.0: A Collaborative MOOC Analytics Visualization Platform
+
+**MOOCviz 2.0:** A Collaborative MOOC Analytics Visualization Platform
 
 Consult Kalyan for access to the last two.
 
