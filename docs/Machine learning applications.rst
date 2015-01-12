@@ -1,10 +1,10 @@
-===========
+
 Machine learning apps
 ===========
 
 
 Predict dropout
-===============
+~~~~~~~~~~~~~~~
 
 
 Data from edX platform is primarily stored in JSON logs. A fundamental axis which is used to record precisely the activity performed 
@@ -15,13 +15,13 @@ syntactically and semantically.
 
 
 Topic Models 
-============
+~~~~~~~~~~~~
 
 
 
 
 Problem analytics 
-=================
+~~~~~~~~~~~~~~~~~
 
 
 
