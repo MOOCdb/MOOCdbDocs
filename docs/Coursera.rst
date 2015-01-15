@@ -37,11 +37,20 @@ Setting Up MOOCdb
 ~~~~~~~~~~~~~
 
 Before converting a course to MOOCdb, there are two databases you need to create and import into. 
+
 MOOOCdb Core
-This database is required by all transformation tasks, but no task will ever alter its data. Hence, you can import it once and use it many times. Call this database **moocdb_core**, and avoid using this name for any other databases. After creating this empty database, import the file ``.../core/moocdb_core.sql`` located inside the piping scripts directory 
- Note that moocdb_core does not have to reside on the same machine on which the output database will be built. 
-The schema
-This database is also required for all transformations, and can be created once and used many times. Call this database **moocdb_clean**, and avoid using this name for any other databases. Unlike moocdb_core, this database has to be created on the same machine on which the output databases will be created. After you create **moocdb_clean** as an empty database, import the file .../core/schema.sql located inside the piping scripts directory. 
+---------------
+
+This database is required by all transformation tasks, but no task will ever alter its data. Hence, you can import it once and use it many times. Call this database **moocdb_core**, and avoid using this name for any other databases. After creating this empty database, import the file ``.../core/moocdb_core.sql`` located inside the piping scripts directory.
+
+.. note::
+
+ The **moocdb_core** does not have to reside on the same machine on which the output database will be built. 
+ 
+The Schema
+------------
+
+This database is also required for all transformations, and can be created once and used many times. Call this database **moocdb_clean**, and avoid using this name for any other databases. Unlike moocdb_core, this database has to be created on the same machine on which the output databases will be created. After you create **moocdb_clean** as an empty database, import the file ``.../core/schema.sql`` located inside the piping scripts directory. 
 Using MOOCdb
 
 You are now ready to transform a Coursera course to MOOCdb.
@@ -60,34 +69,42 @@ These naming changes will also be visible in the hash_mapping table directly. If
 
 
 **source** (Coursera)
+~~~~~~~~~~~
 
 Contains the parameters related to the input (Coursera side)
-• **platform_format**: **coursera_1** or **coursera_2**
-• **course_id**: For **coursera_2** courses, set this to None. For **coursera_1** courses, lookup the numeric part of any of the kvs tables in the anonymized_general database, and write it here as a number. For example, if you see a table called kvs.136.quizzes, then set this parameter to 136
-• **course_url_id**: This must be the session ID of the course, as a string (ex: **algorithms-001**)
-•**host**, **user**, **password**, **port**: The MySQL connection parameters to the server hosting the coursera databases. If you do not know which port the MySQL server uses, try the default value (3306).
-•**hash_mapping_db**: The name of the course hash-mapping database
-•**general_db**: The name of the course anonymized-general database
-•**forum_db**: The name of the course anonymized-forum database
+
+* **platform_format**: **'coursera_1'** or **'coursera_2'**
+* **course_id**: For **coursera_2** courses, set this to None. For **coursera_1** courses, lookup the numeric part of any of     the kvs tables in the anonymized_general database, and write it here as a number. For example, if you see a table called     kvs.136.quizzes, then set this parameter to 136
+* **course_url_id**: This must be the session ID of the course, as a string (ex: **algorithms-001**)
+* **host**, **user**, **password**, **port**: The MySQL connection parameters to the server hosting the coursera databases.      If you do not know which port the MySQL server uses, try the default value (3306).
+* **hash_mapping_db**: The name of the course hash-mapping database
+* **general_db**: The name of the course anonymized-general database
+* **forum_db**: The name of the course anonymized-forum database
 
 **core**
+~~~~~~~
 
-Contains the parameters required to connect to the MOOCdb-core database.
-•**host**, **user**, **password**, **port**: The MySQL connection parameters to the server hosting the moocdb_core database. If you do not know which port the MySQL server uses, try the default value (3306)
+Contains the following parameters required to connect to the MOOCdb-core database.
+
+* **host**, **user**, **password**, **port**: The MySQL connection parameters to the server hosting the moocdb_core database. If you do not know which port the MySQL server uses, try the default value (3306)
 
 **target** (Independent of source platform)
+~~~~~~~~~~
 
 Contains the MOOCdb output and clean database connection parameters.
-•**host**, **user**, **password**, **port**: The MySQL connection parameters to the server hosting the MOOCdb output and clean databases. If you do not know which port the MySQL server uses, try the default value (3306)
-•**db**: The name of the MOOCdb output database
+
+* **host**, **user**, **password**, **port**: The MySQL connection parameters to the server hosting the MOOCdb output and clean databases. If you do not know which port the MySQL server uses, try the default value (3306)
+* **db**: The name of the MOOCdb output database
 
 **options**
+~~~~~~~~~~~~~
 
 Sets transformation options.
-•**log_path**: The path in which the log file for the transformation should be placed. This should be a path to a directory not a file. The log file for a single transformation task will be placed inside that directory and will be named based on the course_url_id and the task start date/time.
-•**log_to_console**: True | False, whether or not log messages should also be written to the console.
-•**debug**: True | False. If True, the script will only transform data for a limited number of users, speeding up the run for development purposes.
-•**num_users_debug_mode**: The number of users to transform in debug mode
+
+* **log_path**: The path in which the log file for the transformation should be placed. This should be a path to a directory not a file. The log file for a single transformation task will be placed inside that directory and will be named based on the course_url_id and the task start date/time.
+* **log_to_console**: True | False, whether or not log messages should also be written to the console.
+* **debug**: True | False. If True, the script will only transform data for a limited number of users, speeding up the run for development purposes.
+* **num_users_debug_mode**: The number of users to transform in debug mode
 
 Checking the Outputs:
 ~~~~~~~~~~~~~~~~~~
