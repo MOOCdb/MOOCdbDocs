@@ -82,6 +82,7 @@ Contains the MOOCdb output and clean database connection parameters.
 •**db**: The name of the MOOCdb output database
 
 **options**
+
 Sets transformation options.
 •**log_path**: The path in which the log file for the transformation should be placed. This should be a path to a directory not a file. The log file for a single transformation task will be placed inside that directory and will be named based on the course_url_id and the task start date/time.
 •**log_to_console**: True | False, whether or not log messages should also be written to the console.
